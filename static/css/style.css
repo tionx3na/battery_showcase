@@ -85,7 +85,7 @@ font-family: 'Rajdhani', sans-serif;
   /* Darken */
   --ltn__primary-color-3: #133236;
   /* Lighten */
-  --ltn__secondary-color: #e53e29;
+  --ltn__secondary-color: #FC4445;
   --ltn__secondary-color-2: #cb3421;
   /* Darken */
   --ltn__secondary-color-3: #fb412a;
@@ -105,9 +105,9 @@ font-family: 'Rajdhani', sans-serif;
   --gradient-color-3: linear-gradient(to bottom, rgba(7,28,31,0) 0%, rgba(7,28,31,1) 90%);
   --gradient-color-4: linear-gradient(to top, rgba(242,246,247,0) 0%, rgba(242,246,247,1) 90%);
   /* Background Colors */
-  --section-bg-1: #F2F6F7;
+  --section-bg-1: #FFFFFF;
   /* White */
-  --section-bg-2: #4B0082;
+  --section-bg-2: #3feee6;
   /* Black */
   /* Border Colors */
   --border-color-1: #e5eaee;
@@ -166,7 +166,7 @@ font-family: 'Rajdhani', sans-serif;
   --green: #008000;
   --aqua: #00FFFF;
   --teal: #008080;
-  --blue: #4B0082;
+  --blue: #55BCC9;
   --navy: #000080;
   --fuchsia: #FF00FF;
   --purple: #800080;
@@ -445,7 +445,7 @@ ol li {
   color: var(--white) !important; }
 
 .ltn__primary-bg {
-  background-color: var(--blue); }
+  background-color: #3feee6; }
 
 .ltn__primary-bg-2 {
   background-color: var(--ltn__primary-color-2); }
@@ -1458,7 +1458,7 @@ ul {
   background: rgba(7, 28, 31, 0.7); }
 
 .bg-overlay-theme-black-80:before {
-  background: rgba(7, 28, 31, 0.8); }
+  background: rgba(63, 238, 230, 0.8); }
 
 .bg-overlay-theme-black-90:before {
   background: rgba(7, 28, 31, 0.9); }
