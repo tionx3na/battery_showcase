@@ -143,7 +143,7 @@ class Batterymodel(models.Model):
 class Compatability(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE) # Foriegn key from BatteryRanges
     model_id = models.ForeignKey(Batterymodel,on_delete=models.CASCADE) # Foriegn key from BatteryModels
-    vehicle_class = models.CharField(choices=CLASS, :max_length=2, blank=False)
+    vehicle_class = models.CharField(choices=CLASS, max_length=2, blank=False)
     OEM = models.CharField(max_length=20, blank=False)
     vehicle_models = models.CharField(max_length=200, blank=False)
 
