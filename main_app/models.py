@@ -68,8 +68,7 @@ class Application(models.Model):
         verbose_name = 'Application'
         verbose_name_plural = 'Applications'
 
-    def __str__(self):
-        return self.range_name
+   
 
 class Advantage(models.Model):
     range_id = models.ForeignKey(Batteryrange, on_delete=models.CASCADE, default=0) # Foriegn Key
@@ -92,14 +91,14 @@ class Advantage(models.Model):
         verbose_name = 'Advantage'
         verbose_name_plural = 'Advantages'
 
-    def __str__(self):
-        return self.range_id
+    
 
 
 
 
 class Batterymodel(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE,default=0) # Foriegn Key
+    part_number=models.CharField(max_length=20,blank=False)
     warranty = models.CharField(max_length=10, blank=False)
     segment = models.CharField(choices=SEGMENT, blank=False,max_length=2) # $ types of segments as of now
     nomenclature = models.CharField(max_length=50, blank=False)
