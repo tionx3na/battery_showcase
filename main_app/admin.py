@@ -4,5 +4,6 @@ from .models import *
 
 admin.site.register(BatteryRange)
 admin.site.register(Advantage)
+admin.site.register(Application)
 admin.site.register(BatteryModel)
 admin.site.register(Compatability)

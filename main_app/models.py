@@ -13,11 +13,11 @@ SEGMENT = (
     ('OW', 'OHW'),
 )
 
+
 class BatteryRange(models.Model):
     range_id = models.AutoField(primary_key=True, default=0) # Primary Key
     range_name = models.CharField(max_length=10,null=False)
     technology = models.CharField(max_length=200, null=False)
-    application = models.CharField(max_length=200, null=False)
     service_life = models.IntegerField(null=False,blank=False)
     cold_start_perf = models.IntegerField(null=False,blank=False)
     deep_cylce_resist = models.IntegerField(null=False,blank=False)
@@ -46,8 +46,34 @@ class BatteryRange(models.Model):
             url = ''
         return url
 
+class Application(models.Model):
+    range_id = models.ForeignKey(BatteryRange, on_delete=models.CASCADE, default=0) # Foriegn Key
+    application_id = models.AutoField(primary_key=True, default=0)  # Primary key
+    is_3_wheeler =  models.BooleanField(default=False)
+    is_small_car = models.BooleanField(default=False)
+    is_large_car = models.BooleanField(default=False)
+    is_xtra_small_car = models.BooleanField(default=False)
+    is_small_van = models.BooleanField(default=False)
+    is_truck = models.BooleanField(default=False)
+    is_bus = models.BooleanField(default=False)
+    is_tractor = models.BooleanField(default=False)
+    is_JCB = models.BooleanField(default=False)
+    is_construction_vehicle = models.BooleanField(default=False)
+    is_bike = models.BooleanField(default=False)
+    is_scooter = models.BooleanField(default=False)
+
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Application'
+        verbose_name_plural = 'Applications'
+
+    def __str__(self):
+        return self.range_name
+
 class Advantage(models.Model):
-    range_id = models.ForeignKey(BatteryRange, on_delete=models.SET_NULL, blank=True, null=True) # Foriegn Key
+    range_id = models.ForeignKey(BatteryRange, on_delete=models.CASCADE,default=0) # Foriegn Key
     advantage_id = models.AutoField(primary_key=True, default=0) # Primary key
     adv1_head = models.CharField(max_length=200, null=True)
     adv1_desc = models.CharField(max_length=200, null=True)
@@ -75,7 +101,7 @@ class Advantage(models.Model):
 
 
 class BatteryModel(models.Model):
-    range_id = models.ForeignKey(BatteryRange,on_delete=models.CASCADE) # Foriegn Key
+    range_id = models.ForeignKey(BatteryRange,on_delete=models.CASCADE,default=0) # Foriegn Key
     part_number = models.CharField(max_length=20,primary_key=True,unique=True) # Primary Key
     warranty = models.CharField(max_length=10, null=False)
     segment = models.CharField(choices=SEGMENT, null=False, max_length=2) # $ types of segments as of now
