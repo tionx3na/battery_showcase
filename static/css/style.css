@@ -166,7 +166,7 @@ font-family: 'Rajdhani', sans-serif;
   --green: #008000;
   --aqua: #00FFFF;
   --teal: #008080;
-  --blue: #55BCC9;
+  --blue: #1E90FF;
   --navy: #000080;
   --fuchsia: #FF00FF;
   --purple: #800080;
@@ -1458,7 +1458,7 @@ ul {
   background: rgba(7, 28, 31, 0.7); }
 
 .bg-overlay-theme-black-80:before {
-  background: rgba(63, 238, 230, 0.8); }
+  background: rgba(135, 206, 235, 0.8); }
 
 .bg-overlay-theme-black-90:before {
   background: rgba(7, 28, 31, 0.9); }
