@@ -110,7 +110,7 @@ class Batterymodel(models.Model):
     width = models.IntegerField(blank=False)
     height = models.IntegerField(blank=False)
     weight = models.FloatField(blank=False)
-    BH_type = models.CharField(max_length=10, blank=False)
+    BH_type = models.CharField(max_length=10, blank=True)
     cell_layout = models.CharField(max_length=20, blank=False)
     model_pic = models.ImageField(null=True, blank=False)
 
