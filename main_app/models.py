@@ -82,6 +82,10 @@ class Application(models.Model):
         verbose_name = 'Application'
         verbose_name_plural = 'Applications'
 
+<<<<<<< HEAD
+=======
+   
+>>>>>>> e7a5e51c42ec2cb5c65620dbe2cd07c414ab8e3b
 
 class Advantage(models.Model):
     range_id = models.ForeignKey(Batteryrange, on_delete=models.CASCADE, default=0) # Foriegn Key
@@ -104,12 +108,23 @@ class Advantage(models.Model):
         verbose_name = 'Advantage'
         verbose_name_plural = 'Advantages'
 
+<<<<<<< HEAD
+=======
+    
+
+
+>>>>>>> e7a5e51c42ec2cb5c65620dbe2cd07c414ab8e3b
 
 
 class Batterymodel(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE,default=0) # Foriegn Key
+<<<<<<< HEAD
     part_number = models.CharField(max_length=20, blank=False,default=0)
     warranty = models.CharField(max_length=10, blank=False)
+=======
+    part_number=models.CharField(max_length=20,blank=False)
+    warranty = models.CharField(max_length=20, blank=False)
+>>>>>>> e7a5e51c42ec2cb5c65620dbe2cd07c414ab8e3b
     segment = models.CharField(choices=SEGMENT, blank=False,max_length=2) # $ types of segments as of now
     nomenclature = models.CharField(max_length=50, blank=False)
     capacity_C5 = models.IntegerField(blank=False)
@@ -120,7 +135,11 @@ class Batterymodel(models.Model):
     width = models.IntegerField(blank=False)
     height = models.IntegerField(blank=False)
     weight = models.FloatField(blank=False)
+<<<<<<< HEAD
     BH_type = models.CharField(max_length=10, blank=False)
+=======
+    BH_type = models.CharField(max_length=10, blank=True)
+>>>>>>> e7a5e51c42ec2cb5c65620dbe2cd07c414ab8e3b
     cell_layout = models.CharField(max_length=20, blank=False)
     model_pic = models.ImageField(null=True, blank=False)
 
