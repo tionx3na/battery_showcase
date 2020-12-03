@@ -13,6 +13,20 @@ SEGMENT = (
     ('OW', 'OHW'),
 )
 
+CLASS = (
+    ('TW', 'Three Wheeler'),
+    ('SC', 'Small Car'),
+    ('LC', 'Large Car'),
+    ('XC', 'Extra Small Car'),
+    ('TK', 'Truck'),
+    ('BS', 'Bus'),
+    ('TR', 'Tractor'),
+    ('JB', 'JCB'),
+    ('CV', 'Construction Vehicle'),
+    ('BK', 'Bike'),
+    ('SR', 'Scooter'),
+)
+
 
 class Batteryrange(models.Model):
     range_name = models.CharField(max_length=10, blank=False)
@@ -68,8 +82,6 @@ class Application(models.Model):
         verbose_name = 'Application'
         verbose_name_plural = 'Applications'
 
-    def __str__(self):
-        return self.range_name
 
 class Advantage(models.Model):
     range_id = models.ForeignKey(Batteryrange, on_delete=models.CASCADE, default=0) # Foriegn Key
@@ -92,14 +104,11 @@ class Advantage(models.Model):
         verbose_name = 'Advantage'
         verbose_name_plural = 'Advantages'
 
-    def __str__(self):
-        return self.range_id
-
-
 
 
 class Batterymodel(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE,default=0) # Foriegn Key
+    part_number = models.CharField(max_length=20, blank=False,default=0)
     warranty = models.CharField(max_length=10, blank=False)
     segment = models.CharField(choices=SEGMENT, blank=False,max_length=2) # $ types of segments as of now
     nomenclature = models.CharField(max_length=50, blank=False)
@@ -110,7 +119,7 @@ class Batterymodel(models.Model):
     length = models.IntegerField(blank=False)
     width = models.IntegerField(blank=False)
     height = models.IntegerField(blank=False)
-    weight = models.IntegerField(blank=False)
+    weight = models.FloatField(blank=False)
     BH_type = models.CharField(max_length=10, blank=False)
     cell_layout = models.CharField(max_length=20, blank=False)
     model_pic = models.ImageField(null=True, blank=False)
@@ -127,7 +136,7 @@ class Batterymodel(models.Model):
     @property
     def imageURL(self):
         try:
-            url = self.range_pic.url
+            url = self.model_pic.url
         except:
             url = ''
         return url
@@ -136,7 +145,7 @@ class Batterymodel(models.Model):
 class Compatability(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE) # Foriegn key from BatteryRanges
     model_id = models.ForeignKey(Batterymodel,on_delete=models.CASCADE) # Foriegn key from BatteryModels
-    vehicle_class_name = models.CharField(max_length=10, blank=False)
+    vehicle_class =  models.CharField(choices=CLASS,max_length=2, blank=False) # Foriegn Key
     OEM = models.CharField(max_length=20, blank=False)
     vehicle_models = models.CharField(max_length=200, blank=False)
 
@@ -147,6 +156,6 @@ class Compatability(models.Model):
         verbose_name_plural = 'Compatibilities'
 
     def __str__(self):
-        return self.vehicle_class_name
+        return self.OEM
 
 

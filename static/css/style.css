@@ -107,7 +107,7 @@ font-family: 'Rajdhani', sans-serif;
   /* Background Colors */
   --section-bg-1: #FFFFFF;
   /* White */
-  --section-bg-2: #3feee6;
+  --section-bg-2: #191970;
   /* Black */
   /* Border Colors */
   --border-color-1: #e5eaee;
@@ -1458,7 +1458,7 @@ ul {
   background: rgba(7, 28, 31, 0.7); }
 
 .bg-overlay-theme-black-80:before {
-  background: rgba(135, 206, 235, 0.8); }
+  background: rgba(25, 25, 112, 0.8); }
 
 .bg-overlay-theme-black-90:before {
   background: rgba(7, 28, 31, 0.9); }
