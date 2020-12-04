@@ -25,6 +25,7 @@ CLASS = (
     ('CV', 'Construction Vehicle'),
     ('BK', 'Bike'),
     ('SR', 'Scooter'),
+    ('SM', 'Small van')
 )
 
 
