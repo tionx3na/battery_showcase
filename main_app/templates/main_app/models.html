@@ -1,0 +1,187 @@
+{% extends 'main_app/main.html' %}
+{% load static %}
+{% block content1 %}
+
+
+   <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area ltn__breadcrumb-area-2 ltn__breadcrumb-color-white bg-overlay-theme-black-90 bg-image" data-bg="img/bg/9.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+                        <div class="section-title-area ltn__section-title-2">
+                            <h6 class="section-subtitle ltn__secondary-color">//  Welcome to our company</h6>
+                            <h1 class="section-title white-color">Personal Details</h1>
+                        </div>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li>Model Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+
+    <!-- TEAM DETAILS AREA START -->
+    <div class="ltn__team-details-area mb-90">
+        <div class="container">
+            <div class="row">
+                {% for batterymodel in batterymodel %}
+                <div class="col-lg-4">
+                    <div class="ltn__team-details-member-info text-center mb-40">
+                        <div class="team-details-img">
+                            <img src="{{batterymodel.range_id.range_pic.url}}" alt="{{batterymodel.part_number}}">
+                        </div>
+                        <h2>{{batterymodel.range_id}}</h2>
+                        <h6 class="text-uppercase ltn__secondary-color">{{batterymodel.part_number}}</h6>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="col-lg-8">
+                    <h1 class="section-title">Model Information</h1>
+                    <hr>
+                    {% for batterymodel in batterymodel %}
+                    <div class="ltn__team-details-member-info-details">
+                        <p>The superior build of Bosch Automotive batteries make them resistant to high temperatures in the engine compartment, minimising acid consumption and corrosion. This translates into minimum self-discharge, extreme tolerance for short distance driving, and reliable operational safety throughout the operating life of the battery.</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ltn__team-details-member-about">
+                                    <ul>
+                                        <li><strong>Model Number :</strong>&nbsp &nbsp {{batterymodel.part_number}}</li>
+                                        <li><strong>Warranty :</strong>&nbsp &nbsp &nbsp {{batterymodel.warranty}}</li>
+                                        <li><strong>Capacity C5 :</strong>&nbsp &nbsp &nbsp  {{batterymodel.capacity_C5}} Ah</li>
+                                        <li><strong>Capacity C20 :</strong>&nbsp &nbsp &nbsp  {{batterymodel.capacity_C20}} Ah</li>
+                                        <li><strong>Width :</strong>&nbsp &nbsp &nbsp  {{batterymodel.width}} mm</li>
+                                        {% if battermodel.BH_type %}
+                                        <li><strong>BH Type :</strong>&nbsp &nbsp &nbsp  {{batterymodel.BH_type}}</li>
+                                        {% else %}
+                                        <li><strong>BH Type :</strong>&nbsp &nbsp &nbsp  ---</li>
+                                        {% endif %}
+                                        <li><strong>Segment :</strong>&nbsp &nbsp &nbsp  {{batterymodel.segment}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ltn__team-details-member-about">
+                                    <ul>
+                                        <li><strong>Reserve Capacity :</strong>&nbsp {{batterymodel.reserve_capacity}} Ah</li>
+                                        <li><strong>CCA :</strong>&nbsp &nbsp &nbsp &nbsp {{batterymodel.CCA}}</li>
+                                        <li><strong>Length :</strong>&nbsp &nbsp &nbsp &nbsp {{batterymodel.length}} mm</li>
+                                        <li><strong>height :</strong>&nbsp &nbsp &nbsp &nbsp {{batterymodel.height}} mm (w/o poles)</li>
+                                        <li><strong>weight :</strong>&nbsp &nbsp &nbsp &nbsp{{batterymodel.weight}} KG</li>
+                                        <li><strong>Cell Layout :</strong>&nbsp &nbsp &nbsp &nbsp {{batterymodel.cell_layout}}</li>
+                                        <li><strong>Nomenclature :</strong>&nbsp &nbsp &nbsp {{batterymodel.nomenclature}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h1 class="text-uppercase ltn__secondary-color" align="center">Warranty: <p>{{batterymodel.warranty}}</p></h1>
+                        <hr>
+                        <h1 class="section-title">Compatability</h1>
+                        <div class="row ltn__custom-gutter mt-50 mb-20">
+                            <div class="col-xl-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6">
+                                    <div class="ltn__feature-icon">
+                                        <span><i class="icon-tire"></i></span>
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3>Vehicle Models Supported:</h3>
+                                        {% for compatability in compatability %}
+                                        {% if batterymodel.part_number == compatability.model_id.part_number %}
+                                        <a class="ltn__service-btn" href="#">{{compatability.OEM}}:</a>
+                                        <ul>
+                                            <li>{{compatability.vehicle_models}}</li>
+                                        </ul>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6 active">
+                                    <div class="ltn__feature-icon">
+                                        <span><i class="icon-mechanic"></i></span>
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3><a href="team.html">Model Dimensions:</a></h3>
+                                        <a class="ltn__service-btn" href="#">Length:</a>
+                                         <ul>
+                                            <li>{{batterymodel.length}} mm</li>
+                                        </ul>
+                                        <a class="ltn__service-btn" href="#">Width:</a>
+                                         <ul>
+                                            <li>{{batterymodel.width}} mm</li>
+                                        </ul>
+                                        <a class="ltn__service-btn" href="#">Height:</a>
+                                         <ul>
+                                            <li>{{batterymodel.height}} mm</li>
+                                        </ul>
+                                        <a class="ltn__service-btn" href="#">Weight:</a>
+                                         <ul>
+                                            <li>{{batterymodel.weight}} kg</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6">
+                                    <div class="ltn__feature-icon">
+                                        <span><i class="icon-wheel-1"></i></span>
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3><a href="service-details.html">Other Details: </a></h3>
+                                        <a class="ltn__service-btn" href="#">Capacity C5:</a>
+                                         <ul>
+                                            <li>{{batterymodel.capacity_C5}} Ah</li>
+                                        </ul>
+                                        <a class="ltn__service-btn" href="#">Capacity C20:</a>
+                                         <ul>
+                                            <li>{{batterymodel.capacity_C20}} Ah</li>
+                                        </ul>
+                                          <a class="ltn__service-btn" href="#">Reserve Capacity:</a>
+                                         <ul>
+                                            <li>{{batterymodel.reserve_capacity}} Ah</li>
+                                        </ul>
+                                         <a class="ltn__service-btn" href="#">CCA:</a>
+                                         <ul>
+                                            <li>{{batterymodel.CCA}}</li>
+                                        </ul>
+                                         <a class="ltn__service-btn" href="#">Cell layout:</a>
+                                         <ul>
+                                            <li>{{batterymodel.cell_layout}} Ah</li>
+                                        </ul>
+                                         <a class="ltn__service-btn" href="#">Nomenclature:</a>
+                                         <ul>
+                                            <li>{{batterymodel.nomenclature}} Ah</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- TEAM DETAILS AREA END -->
+ <!-- BRAND LOGO AREA START -->
+    <div class="ltn__brand-logo-area ltn__brand-logo-1 pt-80 pb-110 plr--9">
+        <div class="container-fluid">
+            <div class="row ltn__brand-logo-active">
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{%static 'img/brand-logo/1.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BRAND LOGO AREA END -->
+
+{% endblock content1 %}

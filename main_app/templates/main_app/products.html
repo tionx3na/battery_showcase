@@ -23,6 +23,19 @@
         </div>
     </div>
     <!-- BREADCRUMB AREA END -->
+ <!-- BRAND LOGO AREA START -->
+    <div class="ltn__brand-logo-area ltn__brand-logo-1 pt-80 pb-110 plr--9">
+        <div class="container-fluid">
+            <div class="row ltn__brand-logo-active">
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{%static 'img/brand-logo/1.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BRAND LOGO AREA END -->
 
     <!-- Gallery area start -->
     <div class="ltn__gallery-area mb-120">
@@ -44,27 +57,28 @@
                       <!--Portfolio Wrapper Start-->
             <div class="ltn__gallery-active row ltn__gallery-style-1">
                 <div class="ltn__gallery-sizer col-1"></div>
-                {% for batterymodels in batterymodels %}
+                {% for batteryrange in batteryrange %}
                 <!-- gallery-item -->
                 <div class="ltn__gallery-item filter_category_3 col-md-4 col-sm-6 col-12">
                     <div class="ltn__gallery-item-inner">
                         <div class="ltn__gallery-item-img">
-                            <a href="img/gallery/1.jpg" data-rel="lightcase:myCollection">
-                                <img src="{{batterymodels.model_pic.url}}" alt="Image">
+                            <a href="{{batteryrange.range_pic.url}}" data-rel="lightcase:myCollection">
+                                <img src="{{batteryrange.range_pic.url}}" alt="Image">
                                 <span class="ltn__gallery-action-icon">
                                     <i class="fas fa-search"></i>
                                 </span>
                             </a>
                         </div>
                         <div class="ltn__gallery-item-info">
-                            <h4><a href="portfolio-details.html">Portfolio Link </a></h4>
-                            <p>Web Design & Development, Branding</p>
+                            <h4><a href="details/{{batteryrange.range_name}}+range" id ="{{batteryrange.range_name}}"> {{batteryrange.range_name}}</a>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="details/{{batteryrange.range_name}}+range" class="theme-btn-1 btn btn-effect-1">Details</a></h4>
                         </div>
                     </div>
                 </div>
                 <!-- gallery-item -->
                   {% endfor %}
-
+            </div>
+        </div>
+    </div>
 
 
 
