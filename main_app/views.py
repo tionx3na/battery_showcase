@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.db.models import Q
 
 # Create your views here.
 def main_app(request):
@@ -33,12 +34,18 @@ def search(request, range_name):
     args =range_name
     if request.method == 'POST':
         oem = request.POST.get('search_l')
-        args = oem
-    print(args)
+        oem1 = oem.lower()
+        oem2 = oem.capitalize()
+        oem1 = oem1.encode('ascii', 'ignore').decode()
+        oem1 = oem1.title()
+    args = oem1
+    args2 = oem2
+    print(args2)
     batteryrange = Batteryrange.objects.filter(range_name=range_name)
     batterymodel = Batterymodel.objects.filter(range_id__range_name=range_name)
-    compatability = Compatability.objects.all().filter(OEM=args)
-    context = {'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name }
+    compatability = Compatability.objects.all().filter(Q(OEM__icontains=args) | Q(model_id__part_number__icontains=args2)).distinct()
+    print(compatability)
+    context = {'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2 }
     return render(request, 'main_app/search.html', context)
 
 
