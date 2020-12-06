@@ -60,16 +60,7 @@
                                         <!-- ltn__language-menu -->
                                         <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
                                             <ul>
-                                                <li><a href="#" class="dropdown-toggle"><span class="active-currency">English</span></a>
-                                                    <ul>
-                                                        <li><a href="#">Arabic</a></li>
-                                                        <li><a href="#">Bengali</a></li>
-                                                        <li><a href="#">Chinese</a></li>
-                                                        <li><a href="#">English</a></li>
-                                                        <li><a href="#">French</a></li>
-                                                        <li><a href="#">Hindi</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li><a href="#" class="dropdown-toggle"><span class="active-currency">English</span></a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -182,7 +173,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-md-5">
-                        <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1 bg-image bg-overlay-theme-black-50" data-bg="img/bg/4.jpg">
+                        <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1 bg-image bg-overlay-theme-black-50" data-bg="{$ static 'img/bg/4.jpg' %}">
                             <h6 class="ltn__secondary-color text-uppercase">// time schedule</h6>
                             <h4 class="footer-title">Open Hours</h4>
                             <ul>
@@ -210,35 +201,7 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
-                        <div class="footer-widget footer-blog-widget">
-                            <h4 class="footer-title">News Feeds.</h4>
-                            <div class="ltn__footer-blog-item">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> June 24, 2020</li>
-                                    </ul>
-                                </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">The branch of biology that
-                                    deals with the normal.</a></h4>
-                            </div>
-                            <div class="ltn__footer-blog-item">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> June 28, 2020</li>
-                                    </ul>
-                                </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">Electric Car Maintenance, Servicing & Repairs</a></h4>
-                            </div>
-                            <div class="ltn__footer-blog-item">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> June 24, 2020</li>
-                                    </ul>
-                                </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">The branch of biology that
-                                    deals with the normal.</a></h4>
-                            </div>
-                        </div>
+                        <img src="{% static 'img/banner/footer.jpg' %}"/>
                     </div>
                 </div>
             </div>
