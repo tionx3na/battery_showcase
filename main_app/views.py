@@ -3,6 +3,9 @@ from .models import *
 from django.db.models import Q
 
 # Create your views here.
+def landing(request):
+    return render(request, 'main_app/landing.html')
+
 def main_app(request):
     batteryrange = Batteryrange.objects.all()
     context = {'batteryrange': batteryrange}
