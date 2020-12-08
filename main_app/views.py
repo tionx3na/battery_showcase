@@ -72,7 +72,7 @@ def search(request, range, range_name):
 
 
 def amaron(request):
-    return render(request, 'main_app/shop2.html')
+    return render(request, 'main_app/amaron.html')
 
 
 def about(request):

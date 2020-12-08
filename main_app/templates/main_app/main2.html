@@ -1,0 +1,265 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Autixir - Car Services and Auto Mechanic HTML Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" href="{%static 'img/favicon.png' %}" type="image/x-icon" />
+    <!-- Font Icons css -->
+    <link rel="stylesheet" href="{%static 'css/font-icons.css' %}">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="{%static 'css/plugins.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- User style -->
+    <link rel="stylesheet" href="{%static 'css/custom.css' %}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+
+    <!-- Modernizr JS -->
+    <script src="{%static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+<!-- Body main wrapper start -->
+{% block content %}
+<div class="body-wrapper">
+
+    <!-- HEADER AREA START (header-4) -->
+    <header class="ltn__header-area ltn__header-4 ltn__header-6 ltn__header-transparent gradient-color-2">
+        <!-- ltn__header-top-area start -->
+        <div class="ltn__header-top-area top-area-color-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ltn__top-bar-menu">
+                            <ul>
+                                <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i> info@webmail.com</a></li>
+                                <li><a href="locations.html"><i class="icon-placeholder"></i> 15/A, Nest Tower, NYC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="top-bar-right text-right">
+                            <div class="ltn__top-bar-menu">
+                                <ul>
+                                    <li>
+                                        <!-- ltn__language-menu -->
+                                        <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
+                                            <ul>
+                                                <li><a href="#" class="dropdown-toggle"><span class="active-currency">English</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- ltn__social-media -->
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+
+                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-top-area end -->
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo-wrap">
+                            <div class="site-logo">
+                                <a href="index.html"><img src="{%static 'img/logo-2.png' %}" alt="Logo"></a>
+                            </div>
+                            <div class="get-support clearfix get-support-color-white">
+                                <div class="get-support-icon">
+                                    <i class="icon-call"></i>
+                                </div>
+                                <div class="get-support-info">
+                                    <h6>Get Support</h6>
+                                    <h4><a href="tel:+123456789">123-456-789-10</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col header-menu-column menu-color-white">
+                        <div class="header-menu d-none d-xl-block">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li class="menu-icon"><a href="{% url 'main_app' %}">Home</a></li>
+                                        <li class="menu-icon"><a href="about">About</a></li>
+
+                                        <li class="menu-icon"><a href="#">Batteries</a>
+                                            <ul class="menu-icon">
+                                                <li><a href="shop">Bosch</a>
+                                                </li>
+                                                <li><a href="shop2">Amaron</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        <li><a href="{% url 'search' '+s' '+s' %}">Search</a></li>
+                                        <li class="special-link"><a href="{% url 'showcase' %}">CATALOGUE</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <div class="mobile-menu-toggle menu-btn-white menu-btn-border--- d-xl-none">
+                        <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                            <svg viewBox="0 0 800 600">
+                                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                                <path d="M300,320 L540,320" id="middle"></path>
+                                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-middle-area end -->
+    </header>
+    <!-- HEADER AREA END -->
+
+
+
+
+{% block content1 %}
+
+{% endblock content1 %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!-- FOOTER AREA START (ltn__footer-2 ltn__footer-color-1) -->
+    <footer class="ltn__footer-area ltn__footer-2 ltn__footer-color-1">
+        <div class="footer-top-area  section-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-5">
+                        <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1 bg-image bg-overlay-theme-black-50" data-bg="{$ static 'img/bg/4.jpg' %}">
+                            <h6 class="ltn__secondary-color text-uppercase">// time schedule</h6>
+                            <h4 class="footer-title">Open Hours</h4>
+                            <ul>
+                                <li>Monday <span>07:00AM - 20:00PM</span></li>
+                                <li>Tuesday <span>07:00AM - 20:00PM</span></li>
+                                <li>Wednesday <span>07:00AM - 20:00PM</span></li>
+                                <li>Thursday <span>07:00AM - 20:00PM</span></li>
+                                <li>Friday <span>07:00AM - 20:00PM</span></li>
+                                <li>Saturday <span>07:00AM - 20:00PM</span></li>
+                                <li>Sunday <span>Official Holiday</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-md-7">
+                        <div class="footer-widget footer-menu-widget footer-menu-widget-2-column clearfix">
+                            <h4 class="footer-title">Bosch Automotive Batteries: <br> Product Range</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#footer_to1">First-class product quality and high safety</a></li>
+                                    <li><a href="#footer_to2">Market coverage of 95%</a></li>
+                                    <li><a href="#footer_to3">High availability of products across India</a></li>
+                                    <li><a href="#footer_to">Complete range consisting of more than 45 types of batteries from a single source</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <img src="{% static 'img/banner/footer.jpg' %}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ltn__copyright-area ltn__copyright-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="site-logo-wrap">
+                            <div class="site-logo">
+                                <a href="index.html"><img src="{%static 'img/logo-2.png' %}" alt="Logo"></a>
+                            </div>
+                            <div class="get-support ltn__copyright-design clearfix">
+                                <div class="get-support-info">
+                                    <h6>Copyright & Design By</h6>
+                                    <h4>Example - <span class="current-year"></span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 align-self-center">
+                        <div class="ltn__copyright-menu text-right">
+                            <ul>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Claim</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER AREA END -->
+</div>
+<!-- Body main wrapper end -->
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{%static 'js/main.js' %}"></script>
+
+</body>
+</html>
+

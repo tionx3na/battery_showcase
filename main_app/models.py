@@ -127,6 +127,7 @@ class Batterymodel(models.Model):
     BH_type = models.CharField(max_length=10, blank=False)
     cell_layout = models.CharField(max_length=20, blank=False)
     model_pic = models.ImageField(null=True, blank=False)
+    price = models.FloatField(default=0, blank=False)
 
     class Meta:
         db_table = ''
@@ -167,6 +168,7 @@ class Bikes(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE) # Foriegn key from BatteryRanges
     model_id = models.CharField(max_length=20, blank=False,default=0)
     bike_pic = models.ImageField(blank=False)  # Profile picture of a battery from each ranges
+    price = models.FloatField(default=0, blank=False)
 
 
     class Meta:
@@ -192,7 +194,6 @@ class Compatabilitybike(models.Model):
     application = models.CharField(max_length=200, blank=False)
     C10 = models.FloatField(blank=False)
     battery_type = models.CharField(max_length=20, blank=False)
-    capacity = models.IntegerField(blank=True, default=0)
     bike_scooter = models.CharField(choices=BISC, max_length=2, blank=True)
 
 
@@ -218,7 +219,7 @@ class Amaronseries(models.Model):
     technology = models.CharField(max_length=50, blank=False)
     variable_ranges = models.CharField(max_length=50, blank=False)
     description = models.CharField(max_length=550, blank=False)
-    price = models.FloatField(blank=False)
+    price_range = models.CharField(max_length=50, blank=True)
 
     class Meta:
         db_table = ''
