@@ -113,7 +113,7 @@ class Advantage(models.Model):
 class Batterymodel(models.Model):
     range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE,default=0) # Foriegn Key
     part_number = models.CharField(max_length=20, blank=False,default=0)
-    warranty = models.CharField(max_length=10, blank=False)
+    warranty = models.CharField(max_length=20, blank=False)
     segment = models.CharField(choices=SEGMENT, blank=False,max_length=2) # $ types of segments as of now
     nomenclature = models.CharField(max_length=50, blank=False)
     capacity_C5 = models.IntegerField(blank=False)
@@ -124,7 +124,7 @@ class Batterymodel(models.Model):
     width = models.IntegerField(blank=False)
     height = models.IntegerField(blank=False)
     weight = models.FloatField(blank=False)
-    BH_type = models.CharField(max_length=10, blank=False)
+    BH_type = models.CharField(max_length=10, blank=True)
     cell_layout = models.CharField(max_length=20, blank=False)
     model_pic = models.ImageField(null=True, blank=False)
     price = models.FloatField(default=0, blank=False)
