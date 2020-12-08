@@ -62,12 +62,12 @@
                                 <div class="row">
                                      <!-- First condition -->
                                     {% if series %}
-                                    {% for series in series %}
+                                    {% for series in series%}
                                     <!-- ltn__product-item -->
                                     <div class="col-xl-4 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href=" "><img src="{{series}}" alt="#"></a>
+                                                <a href=" "><img src="{{series.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -76,7 +76,7 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="models/{{bmodel.part_number}}+range" title="Quick View"">
+                                                            <a href=" " title="Quick View"">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -95,7 +95,7 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="product-details.html">Model Number : </a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bmodel.part_number}}</span>
+                                                    <span>{{series.item}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -105,14 +105,14 @@
 
                                     <!-- CONDITION TO CHECK THE OEM -->
 
-                                    {% elif args %}
+                                    {% elif usage %}
 
-                                     {% for compatability in compatability %}
+                                     {% for usage in usage %}
                                     <!-- ltn__product-item -->
                                     <div class="col-xl-4 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href="models/{{compatability.model_id.part_number}}+range"><img src="{{compatability.range_id.range_pic.url}}" alt="#"></a>
+                                                <a href=" "><img src="{{usage.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -121,7 +121,7 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="models/{{compatability.model_id.part_number}}+range" title="Quick View"">
+                                                            <a href=" " title="Quick View"">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -140,7 +140,7 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="product-details.html">Model Number : </a></h2>
                                                 <div class="product-price">
-                                                    <span>{{compatability.model_id.part_number}}</span>
+                                                    <span>{{usage.item}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,15 +151,15 @@
                                     {% endif %}
 
 
-                                    {% if range_name == "vm" %}
+                                    {% if type %}
                                     <!-- to check vehicle models -->
 
-                                     {% for ll in ll %}
+                                     {% for type in type %}
                                     <!-- ltn__product-item -->
                                     <div class="col-xl-4 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href="models/{{ll.model_id.part_number}}+range"><img src="{{ll.range_id.range_pic.url}}" alt="#"></a>
+                                                <a href=" "><img src="{{type.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -168,7 +168,7 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="models/{{ll.model_id.part_number}}+range" title="Quick View"">
+                                                            <a href=" " title="Quick View"">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -187,7 +187,7 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="product-details.html">Model Number : </a></h2>
                                                 <div class="product-price">
-                                                    <span>{{ll.model_id.part_number}}</span>
+                                                    <span>{{type.item}}</span>
                                                 </div>
                                             </div>
                                         </div>
