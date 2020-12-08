@@ -269,7 +269,7 @@ class Amaronmodels(models.Model):
         verbose_name_plural = 'Amaron models'
 
     def __str__(self):
-        return self.series_id
+        return self.item
 
 
 
