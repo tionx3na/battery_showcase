@@ -220,6 +220,7 @@ class Amaronseries(models.Model):
     variable_ranges = models.CharField(max_length=50, blank=False)
     description = models.CharField(max_length=550, blank=False)
     price_range = models.CharField(max_length=50, blank=True)
+    series_pic = models.ImageField(blank=False, default=0)  # Profile picture of a battery from each ranges
 
     class Meta:
         db_table = ''
@@ -229,6 +230,14 @@ class Amaronseries(models.Model):
 
     def __str__(self):
         return self.series
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.series_pic.url
+        except:
+            url = ''
+        return url
 
 
 class Advantagesamaron(models.Model):

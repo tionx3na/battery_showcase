@@ -49,8 +49,6 @@ def search(request, range, range_name):
         args3 = oem3
         range = None
         range_name = "vm"
-    print(range)
-    print(range_name)
     brange = Batteryrange.objects.filter(range_name=range)
     bmodel = Batterymodel.objects.filter(range_id__range_name=range)
     batteryrange = Batteryrange.objects.filter(range_name=range_name)
@@ -58,17 +56,32 @@ def search(request, range, range_name):
     compatability = Compatability.objects.all().filter(OEM__contains=args)
     bb = Batterymodel.objects.filter(part_number__contains=args2)
     ll = Compatability.objects.filter(vehicle_models__contains=args3)
-    print(args)
-    print(args3)
-    print(brange)
-    print(bmodel)
-    print(batteryrange)
-    print(batterymodel)
-    print(compatability)
-    print(bb)
-    print(ll)
     context = {'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel }
     return render(request, 'main_app/search.html', context)
+
+
+def search2(request, name):
+    args = name
+    args2 = name
+    type = None
+    if request.method == 'POST':
+        query = request.POST.get('search_l')
+        args = None
+        args2 = query.upper()
+
+
+    series = Amaronmodels.objects.filter(series_id__series__contains=args2)
+    usage = Amaronmodels.objects.filter(series_id__usage__contains=args2)
+    if args2 == "C10":
+        type = Amaronmodels.objects.filter(type__contains=args2)
+    print(args)
+    print(args2)
+    print(series)
+    print(usage)
+    print(type)
+    context = { 'args': args, 'args2': args2, 'series': series, 'usage': usage, 'type': type}
+
+    return render(request, 'main_app/search2.html', context)
 
 
 def amaron(request):

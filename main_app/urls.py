@@ -14,4 +14,5 @@ urlpatterns = [
     path('models', views.models, name="models"),
     path('shop2', views.amaron, name="amaron"),
     path('about', views.about, name="about"),
+    path('search2/<str:name>+range',views.search2, name="search2")
 ]

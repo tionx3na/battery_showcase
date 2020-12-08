@@ -104,162 +104,34 @@
                         <div class="ltn__shop-details-tab-menu">
                             <div class="nav">
                                 <a class="active show" data-toggle="tab" href="#liton_tab_details_1_1">Description</a>
-                                <a data-toggle="tab" href="#liton_tab_details_1_2" class="">Full Features</a>
+                                <a data-toggle="tab" href="#liton_tab_details_1_2" class="">More Models</a>
                             </div>
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade active show" id="liton_tab_details_1_1">
                                 <div class="ltn__shop-details-tab-content-inner">
-                                    <h4 class="title-2">BOSCH {{batteryrange.range_name}} Series Battery</h4>
-                                    <p> Efficient Bosch quality for a wide range of requirements and vehicle types – that is what Bosch S3/S4/S5 SLI batteries stand out for</p>
-                                    <h4>Advantages:</h4>
+                                    <h4 class="title-2">Amaron Quanta S-XEL</h4>
                                      <ul>
-                                         <li><strong>Outstanding starting power and a long service life:</strong> Optimised current flow and less corrosion increases the cold-start performance</li>
-                                         <li><strong>Absolutely maintenance-free:</strong> The double lid with labyrinth design returns condensed water to the battery, thus reducing the water consumption, and preventing sudden leaks of acid if tilted</li>
-                                         <li><strong>Particularly high corrosion resistance:</strong> Ensured by optimised production processes</li>
-                                         <li><strong>High safety: </strong>Ensured by double backfire protection and integrated central degassing</li>
+                                         <li>High-Pressure Spine casting (100 Bar) provides uni-directional grains orientation with microhardness extradite superior life.</li>
+                                         <li>Allow rapid charge & delivers high power. Optimized current dense & higher conductivity leading to last long.</li>
+                                         <li>Mitigating corrosion prone zone provides high life - Really long</li>
+                                         <li>Unique wet pasting process, lower resistance to deliver consistent power & low self-discharge</li>
+                                         <li>Automated cast-on-strap delivers durability & performance</li>
+                                         <li>Rigid & Integrated terminal connectivity provides sustainable strength</li>
+                                         <li>Best in class vent design reduces acid spewing, built-in-flame arrestor avoids acid mist exist</li>
+                                         <li>Industry first acid circulation formation process enhances battery life</li>
                                      </ul>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="liton_tab_details_1_2">
                                 <div class="ltn__shop-details-tab-content-inner">
-                                    <h4 class="title-2">More Information</h4>
-                                    <!-- comment-area -->
-                                    <div class="ltn__comment-area mb-30">
-                                        <div class="ltn__comment-inner">
-                                            <ul>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        {% for batteryrange in batteryrange %}
-                                                        <div class="ltn__commenter-img">
-                                                            <img src="{{batteryrange.range_pic.url}}" alt="Image">
-                                                        </div>
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6><a href="#">BOSCH {{batteryrange.range_name}} Series Battery</a></h6>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Seires:</h6>
-                                                            <span>{{batteryrange.range_name}}</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Technology:</h6>
-                                                            <span>{{batteryrange.technology}}</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Service Life:</h6>
-                                                            <span class="ltn__comment-reply-btn">{{batteryrange.service_life}}/5</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                    <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Cold-Starting Performance:</h6>
-                                                            <span class="ltn__comment-reply-btn">{{batteryrange.cold_start_perf}}/5</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                    <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Deep-Cycle Resistance:</h6>
-                                                            <span class="ltn__comment-reply-btn">{{batteryrange.deep_cylce_resist}}/5</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                </li>
-                                                    <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Number of Electrical Consumers:</h6>
-                                                            <span class="ltn__comment-reply-btn">{{batteryrange.no_of_electrical_consumers}}/5</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Sustainability for shorter distances:</h6>
-                                                            <span class="ltn__comment-reply-btn">{{batteryrange.suitability_of_short_dist}}/5</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                  <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Maintenance:</h6>
-                                                            {% if batteryrange.maintenance == "MF" %}
-                                                            <span>Maintenance Free!</span>
-                                                            <br>
-                                                            {% else %}
-                                                            <span>Not Maintenance Free!</span>
-                                                             {% endif %}
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Installation inside Vehicle:</h6>
-                                                             {% if batteryrange.installation_inside_vehicle %}
-                                                                <span>Yes!</span>
-                                                            {% else %}
-                                                                <span>No!</span>
-                                                            {% endif %}
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Installation Angle:</h6>
-                                                            <span>{{batteryrange.installation_angle}}°</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ltn__comment-item clearfix">
-                                                        <div class="ltn__commenter-comment">
-                                                            <h6>Warranty:</h6>
-                                                            <span>{{batteryrange.warranty_duration}} Months</span>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
                                     <!-- comment-reply -->
                                     <div class="ltn__comment-reply-area ltn__form-box mb-30">
                                         <form action="#">
                                             <div class="mb-30">
                                                 <div class="add-a-review">
                                                     <h4>View all models:</h4> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Models</button>
+                                                     <a href="" class="theme-btn-1 btn btn-effect-1">MODELS</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -303,19 +175,72 @@
                             <h1 class="section-title">Amaron Solar<span>.</span></h1>
                             <p> The latest offering from the house of Amara Raja to provide power backup solutions for any type of solar power systems. Amaron Solar available in both SMF & Tubular variants. Amaron Solar Tubular Batteries has covered all aspects in design. required to give high life beside to ensure fast charge with high efficiency and best in class went design making it a perfect choice for high cyclic back-up requirement. SMF Battery for solar applications which is built to perform. Sensing the need of enduring and reliable source of solar power, Amara Raja offers the complete range of batteries for solar systems available in the market. </p>
                             <hr>
-                            <div class="about-call-us">
-                            <div class="call-us-icon">
-                               <h4>View more details: </h4>
-                            </div>
-                             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="" class="theme-btn-1 btn btn-effect-1">DETAILS</a>
-                        </div>
+
                         </div>
                     </div>
+                    <div class="section-title-area ltn__section-title-2">
+
+                        <p> Amara Raja Batteries Limited (ARBL), the flagship company of the Amara Raja Group, is the technology leader and is one of the largest manufacturers of lead-acid batteries for both industrial and automotive applications in the Indian storage battery industry. ARBL has prestigious original equipment manufacturers like Maruti Suzuki India Limited, Hyundai Motors India Limited, Ford India Limited, Tata Motors Limited, Mahindra and Mahindra Limited, Honda Cars India Limited, Renault Nissan, Honda Motorcycles & Scooters India Private Ltd, Royal Enfield, Bajaj Auto Ltd, and many more as its clients. The Company's Industrial and Automotive batteries are exported to 32 countries across the globe. In India, Amara Raja is the preferred supplier to major telecom service providers, Telecom equipment manufacturers, UPS sector (OEM & Replacement), Indian Railways and to Power, Oil & Gas among other industry segments. </p>
+                        </div>
                 </div>
                <div class="col-lg-6 align-self-center">
-                      <img src="{%static 'img/others/ams.jpg' %}" alt="Image">
+                   <img src="{%static 'img/others/ams.jpg' %}" alt="Image">
                 </div>
             </div>
+              <!-- Shop Tab Start -->
+                    <div class="ltn__shop-details-tab-inner ltn__shop-details-tab-inner-2">
+                        <div class="ltn__shop-details-tab-menu">
+                            <div class="nav">
+                                <a class="active show" data-toggle="tab" href="#liton_tab_details_1_3">Description</a>
+                                <a data-toggle="tab" href="#liton_tab_details_1_4" class="">More Models</a>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show" id="liton_tab_details_1_3">
+                                <div class="ltn__shop-details-tab-content-inner">
+                                    <h4 class="title-2">Amaron Solar Tubular Battery</h4>
+                                     <ul>
+                                        <img src="{%static 'img/others/tubular.png' %}" alt="Image">
+                                         <br>
+                                         <hr>
+                                         <li>Suitable for PSOC and deep discharge</li>
+                                         <li>Unique heavy duty corrosion-resistant alloy for positive grids to increase cyclic life in tropical environments</li>
+                                         <li>Mitigating corrosion prone zone provides high life - Really long</li>
+                                         <li>Radgrid™ profile providing lower internal resistance and performance</li>
+                                         <li>Instacharge™, A pateneted paste recipe for excellent charge acceptance</li>
+                                         <li>Higher AH and WH Efficiency</li>
+                                     </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="liton_tab_details_1_4">
+                                <div class="ltn__shop-details-tab-content-inner">
+                                    <!-- comment-reply -->
+
+                                        <form action="#">
+                                            <div class="mb-30">
+                                               <div class="ltn__shop-details-tab-content-inner">
+                                                   <h4 class="title-2">Amaron Solar Tubular Battery</h4>
+                                                 <ul>
+                                                 <img src="{%static 'img/others/smf.png' %}" alt="Image">
+                                                <br>
+                                                <hr>
+                                                <li>Suitable for PSOC and deep discharge</li>
+                                                <li>Unique heavy duty corrosion-resistant alloy for positive grids to increase cyclic life in tropical environments</li>
+                                                <li>Mitigating corrosion prone zone provides high life - Really long</li>
+                                                <li>Radgrid™ profile providing lower internal resistance and performance</li>
+                                                <li>Instacharge™, A pateneted paste recipe for excellent charge acceptance</li>
+                                                <li>Higher AH and WH Efficiency</li>
+                                                </ul>
+                                                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                                     <a href="" class="theme-btn-1 btn btn-effect-1">MODELS</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shop Tab End -->
         </div>
     </div>
     <!-- WHY CHOOSE US AREA END -->
