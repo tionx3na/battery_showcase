@@ -28,6 +28,11 @@ CLASS = (
     ('SM', 'Small van')
 )
 
+BISC = (
+    ('BK', 'Bike'),
+    ('SC', 'Scooter')
+)
+
 
 class Batteryrange(models.Model):
     range_name = models.CharField(max_length=10, blank=False)
@@ -185,8 +190,11 @@ class Compatabilitybike(models.Model):
     bike_id = models.ForeignKey(Bikes,on_delete=models.CASCADE) # Foriegn key from Bikes
     OEM = models.CharField(max_length=20, blank=False)
     application = models.CharField(max_length=200, blank=False)
-    cs30 = models.FloatField(blank=False)
+    C10 = models.FloatField(blank=False)
     battery_type = models.CharField(max_length=20, blank=False)
+    capacity = models.IntegerField(blank=True, default=0)
+    bike_scooter = models.CharField(choices=BISC, max_length=2, blank=True)
+
 
 
     class Meta:
