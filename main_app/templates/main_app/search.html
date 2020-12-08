@@ -41,8 +41,12 @@
                                 </div>
                             </li>
                             <li>
-                               <div class="showing-product-number text-right">
+                               <div class="showing-product-number text-right typewriter">
+                                    {% if args == "+s" %}
+                                   <span>Search for a model...</span>
+                                    {% else %}
                                     <span>Showing Results...</span>
+                                   {% endif %}
                                 </div>
                             </li>
                             <li>
@@ -56,7 +60,6 @@
                         <div class="tab-pane fade active show" id="liton_product_grid">
                             <div class="ltn__product-tab-content-inner ltn__product-grid-view">
                                 <div class="row">
-
                                      <!-- First condition -->
                                     {% if range %}
                                     {% for bmodel in bmodel %}

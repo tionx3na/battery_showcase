@@ -158,3 +158,116 @@ class Compatability(models.Model):
         return self.OEM
 
 
+class Bikes(models.Model):
+    range_id = models.ForeignKey(Batteryrange,on_delete=models.CASCADE) # Foriegn key from BatteryRanges
+    model_id = models.CharField(max_length=20, blank=False,default=0)
+    bike_pic = models.ImageField(blank=False)  # Profile picture of a battery from each ranges
+
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Bike'
+        verbose_name_plural = 'Bikes'
+
+    def __str__(self):
+        return self.model_id
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.bike_pic.url
+        except:
+            url = ''
+        return url
+
+class Compatabilitybike(models.Model):
+    bike_id = models.ForeignKey(Bikes,on_delete=models.CASCADE) # Foriegn key from Bikes
+    OEM = models.CharField(max_length=20, blank=False)
+    application = models.CharField(max_length=200, blank=False)
+    cs30 = models.FloatField(blank=False)
+    battery_type = models.CharField(max_length=20, blank=False)
+
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Bike Compatability'
+        verbose_name_plural = 'Bike compatabilities'
+
+    def __str__(self):
+        return self.OEM
+
+
+class Amaronseries(models.Model):
+    series = models.CharField(max_length=50, blank=False)
+    capacity = models.IntegerField(blank=False)
+    battery_type = models.CharField(max_length=50, blank=False)
+    warranty = models.IntegerField(blank=False)
+    usage = models.CharField(max_length=50, blank=False)
+    voltage = models.IntegerField(blank=False)
+    weight = models.FloatField(blank=False)
+    technology = models.CharField(max_length=50, blank=False)
+    variable_ranges = models.CharField(max_length=50, blank=False)
+    description = models.CharField(max_length=550, blank=False)
+    price = models.FloatField(blank=False)
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Amaron Series'
+        verbose_name_plural = 'Amaron Series'
+
+    def __str__(self):
+        return self.series
+
+
+class Advantagesamaron(models.Model):
+    series_id = models.ForeignKey(Amaronseries,on_delete=models.CASCADE) # Foriegn key from Amaronseries
+    adv1 = models.CharField(max_length=200, blank=True)
+    adv2 = models.CharField(max_length=200, blank=True)
+    adv3 = models.CharField(max_length=200, blank=True)
+    adv4 = models.CharField(max_length=200, blank=True)
+    adv5 = models.CharField(max_length=200, blank=True)
+    adv6 = models.CharField(max_length=200, blank=True)
+    adv7 = models.CharField(max_length=200, blank=True)
+    adv8 = models.CharField(max_length=200, blank=True)
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Amaron Advantage'
+        verbose_name_plural = 'Amaron Advantages'
+
+    def __str__(self):
+        return self.series_id
+
+
+class Amaronmodels(models.Model):
+    series_id = models.ForeignKey(Amaronseries,on_delete=models.CASCADE) # Foriegn key from Amaronseries
+    type = models.CharField(max_length=20, blank=True)
+    item = models.CharField(max_length=100, blank=True)
+    capacity = models.IntegerField(blank=False)
+    warranty = models.IntegerField(blank=False)
+    dealer = models.IntegerField(blank=False)
+    price = models.IntegerField(blank=False)
+
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Amaron models'
+        verbose_name_plural = 'Amaron models'
+
+    def __str__(self):
+        return self.series_id
+
+
+
+
+
+
+
+
+
+
