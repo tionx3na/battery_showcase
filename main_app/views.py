@@ -81,6 +81,4 @@ def about(request):
 def contacts(request):
     return render(request, 'main_app/contact.html')
 
-def update_variable(value):
-    value = None
-    return value
+

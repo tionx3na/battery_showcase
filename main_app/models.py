@@ -258,7 +258,6 @@ class Amaronmodels(models.Model):
     item = models.CharField(max_length=100, blank=True)
     capacity = models.IntegerField(blank=False)
     warranty = models.IntegerField(blank=False)
-    dealer = models.IntegerField(blank=False)
     price = models.IntegerField(blank=False)
 
 
