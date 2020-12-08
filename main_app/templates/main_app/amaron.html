@@ -99,6 +99,176 @@
                         </div>
                     </div>
                 </div>
+                 <!-- Shop Tab Start -->
+                    <div class="ltn__shop-details-tab-inner ltn__shop-details-tab-inner-2">
+                        <div class="ltn__shop-details-tab-menu">
+                            <div class="nav">
+                                <a class="active show" data-toggle="tab" href="#liton_tab_details_1_1">Description</a>
+                                <a data-toggle="tab" href="#liton_tab_details_1_2" class="">Full Features</a>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show" id="liton_tab_details_1_1">
+                                <div class="ltn__shop-details-tab-content-inner">
+                                    <h4 class="title-2">BOSCH {{batteryrange.range_name}} Series Battery</h4>
+                                    <p> Efficient Bosch quality for a wide range of requirements and vehicle types – that is what Bosch S3/S4/S5 SLI batteries stand out for</p>
+                                    <h4>Advantages:</h4>
+                                     <ul>
+                                         <li><strong>Outstanding starting power and a long service life:</strong> Optimised current flow and less corrosion increases the cold-start performance</li>
+                                         <li><strong>Absolutely maintenance-free:</strong> The double lid with labyrinth design returns condensed water to the battery, thus reducing the water consumption, and preventing sudden leaks of acid if tilted</li>
+                                         <li><strong>Particularly high corrosion resistance:</strong> Ensured by optimised production processes</li>
+                                         <li><strong>High safety: </strong>Ensured by double backfire protection and integrated central degassing</li>
+                                     </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="liton_tab_details_1_2">
+                                <div class="ltn__shop-details-tab-content-inner">
+                                    <h4 class="title-2">More Information</h4>
+                                    <!-- comment-area -->
+                                    <div class="ltn__comment-area mb-30">
+                                        <div class="ltn__comment-inner">
+                                            <ul>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        {% for batteryrange in batteryrange %}
+                                                        <div class="ltn__commenter-img">
+                                                            <img src="{{batteryrange.range_pic.url}}" alt="Image">
+                                                        </div>
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6><a href="#">BOSCH {{batteryrange.range_name}} Series Battery</a></h6>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Seires:</h6>
+                                                            <span>{{batteryrange.range_name}}</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Technology:</h6>
+                                                            <span>{{batteryrange.technology}}</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Service Life:</h6>
+                                                            <span class="ltn__comment-reply-btn">{{batteryrange.service_life}}/5</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                    <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Cold-Starting Performance:</h6>
+                                                            <span class="ltn__comment-reply-btn">{{batteryrange.cold_start_perf}}/5</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                    <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Deep-Cycle Resistance:</h6>
+                                                            <span class="ltn__comment-reply-btn">{{batteryrange.deep_cylce_resist}}/5</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                </li>
+                                                    <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Number of Electrical Consumers:</h6>
+                                                            <span class="ltn__comment-reply-btn">{{batteryrange.no_of_electrical_consumers}}/5</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Sustainability for shorter distances:</h6>
+                                                            <span class="ltn__comment-reply-btn">{{batteryrange.suitability_of_short_dist}}/5</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                  <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Maintenance:</h6>
+                                                            {% if batteryrange.maintenance == "MF" %}
+                                                            <span>Maintenance Free!</span>
+                                                            <br>
+                                                            {% else %}
+                                                            <span>Not Maintenance Free!</span>
+                                                             {% endif %}
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Installation inside Vehicle:</h6>
+                                                             {% if batteryrange.installation_inside_vehicle %}
+                                                                <span>Yes!</span>
+                                                            {% else %}
+                                                                <span>No!</span>
+                                                            {% endif %}
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Installation Angle:</h6>
+                                                            <span>{{batteryrange.installation_angle}}°</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="ltn__comment-item clearfix">
+                                                        <div class="ltn__commenter-comment">
+                                                            <h6>Warranty:</h6>
+                                                            <span>{{batteryrange.warranty_duration}} Months</span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <!-- comment-reply -->
+                                    <div class="ltn__comment-reply-area ltn__form-box mb-30">
+                                        <form action="#">
+                                            <div class="mb-30">
+                                                <div class="add-a-review">
+                                                    <h4>View all models:</h4> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Models</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shop Tab End -->
             </div>
         </div>
     </div>

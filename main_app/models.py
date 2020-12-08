@@ -248,8 +248,6 @@ class Advantagesamaron(models.Model):
         verbose_name = 'Amaron Advantage'
         verbose_name_plural = 'Amaron Advantages'
 
-    def __str__(self):
-        return self.series_id
 
 
 class Amaronmodels(models.Model):
