@@ -67,7 +67,7 @@
                                     <div class="col-xl-4 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href=" "><img src="{{series.series_id.series_pic.url}}" alt="#"></a>
+                                                <a href="adetails/{{series.item}}+range"><img src="{{series.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -76,7 +76,7 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href=" " title="Quick View"">
+                                                            <a href="adetails/{{series.item}}+range" title="Quick View"">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -93,7 +93,7 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="product-details.html">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="adetails/{{series.item}}+range">Model Number : </a></h2>
                                                 <div class="product-price">
                                                     <span>{{series.item}}</span>
                                                 </div>
@@ -112,7 +112,7 @@
                                     <div class="col-xl-4 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href=" "><img src="{{usage.series_id.series_pic.url}}" alt="#"></a>
+                                                <a href="adetails/{{usage.item}}+range"><img src="{{usage.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -121,7 +121,7 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href=" " title="Quick View"">
+                                                            <a href="adetails/{{usage.item}}+range" title="Quick View"">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -138,7 +138,7 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="product-details.html">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="adetails/{{series.item}}+range">Model Number : </a></h2>
                                                 <div class="product-price">
                                                     <span>{{usage.item}}</span>
                                                 </div>
@@ -159,7 +159,7 @@
                                     <div class="col-xl-4 col-sm-6 col-12">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href=" "><img src="{{type.series_id.series_pic.url}}" alt="#"></a>
+                                                <a href="adetails/{{type.item}}+range"><img src="{{type.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -168,7 +168,7 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href=" " title="Quick View"">
+                                                            <a href="adetails/{{type.item}}+range" title="Quick View"">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -185,7 +185,7 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="product-details.html">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="adetails/{{series.item}}+range">Model Number : </a></h2>
                                                 <div class="product-price">
                                                     <span>{{type.item}}</span>
                                                 </div>
@@ -230,13 +230,13 @@
                         <div class="tab-pane fade" id="liton_product_list">
                             <div class="ltn__product-tab-content-inner ltn__product-list-view">
                                 <div class="row">
-                                    {% if range %}
-                                    {% for bmodel in bmodel %}
+                                    {% if series %}
+                                    {% for series in series %}
                                     <!-- ltn__product-item -->
                                     <div class="col-lg-12">
                                         <div class="ltn__product-item ltn__product-item-3">
                                             <div class="product-img">
-                                                <a href=" models/{{bmodel.part_number}}+range"><img src="{{bmodel.range_id.range_pic.url}}" alt="#"></a>
+                                                <a href="adetails/{{series.item}}+range"><img src="{{series.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -244,7 +244,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title"><a href="#">BOSCH {{bmodel.range_id.range_name}} Series</a></h2>
+                                                <h2 class="product-title"><a href="#">Amaron {{series.series_id.series}} Series</a></h2>
                                                 <div class="product-ratting">
                                                     <ul>
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
@@ -255,15 +255,15 @@
                                                     </ul>
                                                 </div>
                                                 <div class="product-price">
-                                                    <span>{{bmodel.part_number}}</span>
+                                                    <span>{{series.item}}</span>
                                                 </div>
                                                 <div class="product-brief">
-                                                    <p>{{bmodel.range_id.technology}}</p>
+                                                    <p>Type {{series.type}}</p>
                                                 </div>
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="models/{{bmodel.part_number}}+range">
+                                                            <a href="adetails/{{series.item}}+range">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -277,14 +277,13 @@
 
                                      <!-- CONDITION TO CHECK THE OEM -->
 
-                                    {% elif args %}
-
-                                     {% for compatability in compatability %}
+                                    {% elif usage %}
+                                    {% for usage in usage %}
                                     <!-- ltn__product-item -->
                                     <div class="col-lg-12">
                                         <div class="ltn__product-item ltn__product-item-3">
                                             <div class="product-img">
-                                                <a href=" models/{{compatability.model_id.part_number}}+range"><img src="{{compatability.range_id.range_pic.url}}" alt="#"></a>
+                                                <a href="adetails/{{usage.item}}+range"><img src="{{usage.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -292,7 +291,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title"><a href="#">Compatible with {{args}}</a></h2>
+                                                <h2 class="product-title"><a href="#">Amaron {{usage.series_id.series}} Series</a></h2>
                                                 <div class="product-ratting">
                                                     <ul>
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
@@ -303,15 +302,15 @@
                                                     </ul>
                                                 </div>
                                                 <div class="product-price">
-                                                    <span>{{compatability.model_id.part_number}}</span>
+                                                    <span>{{usage.item}}</span>
                                                 </div>
                                                 <div class="product-brief">
-                                                    <p>{{compatability.range_id.technology}}</p>
+                                                    <p>Type {{usage.type}}</p>
                                                 </div>
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="models/{{compatability.model_id.part_number}}+range">
+                                                            <a href="adetails/{{usage.item}}+range">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -325,15 +324,14 @@
                                     {% endif %}
 
 
-                                    {% if range_name == "vm" %}
-                                    <!-- to check vehicle models -->
 
-                                     {% for ll in ll %}
+                                    {% if type %}
+                                    {% for type in type %}
                                     <!-- ltn__product-item -->
                                     <div class="col-lg-12">
                                         <div class="ltn__product-item ltn__product-item-3">
                                             <div class="product-img">
-                                                <a href=" models/{{ll.model_id.part_number}}+range"><img src="{{ll.range_id.range_pic.url}}" alt="#"></a>
+                                                <a href="adetails/{{type.item}}+range"><img src="{{type.series_id.series_pic.url}}" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">New</li>
@@ -341,7 +339,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title"><a href="product-details.html">Compatible with {{args}}</a></h2>
+                                                <h2 class="product-title"><a href="#">Amaron {{type.series_id.series}} Series</a></h2>
                                                 <div class="product-ratting">
                                                     <ul>
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
@@ -352,15 +350,15 @@
                                                     </ul>
                                                 </div>
                                                 <div class="product-price">
-                                                    <span>{{ll.model_id}}</span>
+                                                    <span>{{type.item}}</span>
                                                 </div>
                                                 <div class="product-brief">
-                                                    <p>{{ll.range_id.technology}}</p>
+                                                    <p>Type {{type.type}}</p>
                                                 </div>
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="models/{{ll.model_id.part_number}}+range">
+                                                            <a href="adetails/{{type.item}}+range">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
@@ -392,32 +390,32 @@
                             </form>
                         </div>
                         <!-- Category Widget -->
-                        {% if range %}
+                        {% if series %}
                         <div class="widget ltn__menu-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
                             <ul>
-                                 {% for bmodel in bmodel %}
-                                <li><a href="models/{{bmodel.part_number}}+range">{{bmodel.part_number}}<span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                 {% for series in series %}
+                                <li><a href="adetails/{{series.item}}+range">{{series.item}}<span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
                                 {% endfor %}
                             </ul>
                         </div>
-                         {% elif args %}
+                         {% elif usage %}
                         <div class="widget ltn__menu-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
                             <ul>
-                               {% for compatability in compatability %}
-                                <li><a href="models/{{compatability.model_id.part_number}}+range">{{compatability.model_id.part_number}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                               {% for usage in usage %}
+                                <li><a href="adetails/{{usage.item}}+range">{{usage.item}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
                                 {% endfor %}
                             </ul>
                         </div>
 
-                        {% elif range_name == "vm" %}
+                        {% elif type  %}
                         <!-- to check vehicle models -->
                         <div class="widget ltn__menu-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
                             <ul>
-                               {% for ll in ll %}
-                                <li><a href="models/{{ll.model_id.part_number}}+range">{{ll.model_id.part_number}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                               {% for type in type %}
+                                <li><a href="adetails/{{type.item}}+range">{{type.item}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
                                 {% endfor %}
                             </ul>
                         </div>

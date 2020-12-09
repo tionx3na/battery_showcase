@@ -56,7 +56,24 @@ def search(request, range, range_name):
     compatability = Compatability.objects.all().filter(OEM__contains=args)
     bb = Batterymodel.objects.filter(part_number__contains=args2)
     ll = Compatability.objects.filter(vehicle_models__contains=args3)
-    context = {'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel }
+    bikes = Bikes.objects.filter(model_id__contains=args3)
+    bikes_comp = Compatabilitybike.objects.filter(OEM__contains=args3)
+    bike_app = Compatabilitybike.objects.filter(application__contains=args3)
+    print(args)
+    print(args2)
+    print(args3)
+    print(brange)
+    print(bmodel)
+    print(batteryrange)
+    print(batterymodel)
+    print(compatability)
+    print(ll)
+    print(bb)
+    print(bikes)
+    print(bikes_comp)
+    print(bike_app)
+
+    context = {'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel, 'bikes': bikes, 'bikes_comp': bikes_comp, 'bike_app': bike_app }
     return render(request, 'main_app/search.html', context)
 
 
@@ -86,6 +103,13 @@ def search2(request, name):
 
 def amaron(request):
     return render(request, 'main_app/amaron.html')
+
+
+def amarondetails(request, amodel):
+    aseries = Amaronseries.objects.filter(series=amodel)
+    amodel = Amaronmodels.objects.filter(item=amodel)
+    context = { 'aseries': aseries, 'amodel': amodel}
+    return render(request, 'main_app/amarondetails.html', context)
 
 
 def about(request):
