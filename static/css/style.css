@@ -98,7 +98,7 @@ font-family: 'Rajdhani', sans-serif;
   --ltn__color-3: #A3BCC0;
   --ltn__color-4: #84A2A6;
   /* Gradient Colors */
-  --gradient-color-1: linear-gradient(90deg, rgba(242,139,194,1) 0%, rgba(216,177,242,1) 50%);      #footer BOSCH
+  --gradient-color-1: linear-gradient(90deg, rgba(23,61,105,1) 0%, rgba(38,114,201,1) 50%);      #footer BOSCH
   --gradient-color-2: linear-gradient(90deg, rgba(242,139,194,1) 0%, rgba(216,177,242,1) 50%);          #footer AMARAON
   --gradient-color-3: linear-gradient(to bottom, rgba(7,28,31,0) 0%, rgba(7,28,31,1) 90%);
   --gradient-color-4: linear-gradient(to top, rgba(242,246,247,0) 0%, rgba(242,246,247,1) 90%);

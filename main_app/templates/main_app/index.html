@@ -7,7 +7,7 @@
     <div class="ltn__slider-area ltn__slider-3 ltn__slider-6 section-bg-1">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 arrow-white">
             <!-- ltn__slide-item  -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 ltn__slide-item-5 text-color-white bg-image" data-bg="{%static 'img/slider/41.jpg' %}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 ltn__slide-item-5 text-color-white bg-overlay-theme-black-60 bg-image" data-bg="{%static 'img/bg/9.jpg' %}">
                 <div class="ltn__slide-item-inner">
                     <div class="container">
                         <div class="row">
@@ -17,7 +17,6 @@
                                         <div class="slide-item-info">
                                             <div class="slide-item-info-inner ltn__slide-animation">
                                                 <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automative Batteries</h6>
-                                                <h1 class="slide-title animated ">BOSCH <br> Batteries</h1>
                                                 <div class="slide-brief animated">
                                                     <p>Works any time, every time, all the time</p>
                                                 </div>
@@ -40,7 +39,7 @@
                 </div>
             </div>
             <!-- ltn__slide-item  -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 ltn__slide-item-5 text-color-white bg-image bg-overlay-theme-black-80" data-bg="{%static 'img/slider/41.jpg' %}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 ltn__slide-item-5 text-color-white  bg-overlay-theme-black-60 bg-image " data-bg="{%static 'img/slider/41-2.jpg' %}">
                 <div class="ltn__slide-item-inner text-right">
                     <div class="container">
                         <div class="row">
@@ -50,12 +49,12 @@
                                         <div class="slide-item-info">
                                             <div class="slide-item-info-inner ltn__slide-animation" id="footer_to1">
                                                 <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automative Batteries</h6>
-                                                <h1 class="slide-title animated ">AMARON <br>  Batteries</h1>
+                                                <h1 class="slide-title animated ">BOSCH <br>  Batteries</h1>
                                                 <div class="slide-brief animated">
                                                     <p>100% long-lasting guarantee </p>
                                                 </div>
                                                 <div class="btn-wrapper animated">
-                                                    <a href="shop2" class="theme-btn-1 btn btn-effect-1">View</a>
+                                                    <a href="shop" class="theme-btn-1 btn btn-effect-1">View</a>
                                                     <a href="contact" class="btn btn-transparent btn-effect-2 white-color">Contact</a>
                                                 </div>
                                             </div>
@@ -63,8 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="slide-item-img">
-                                    <img src="{%static 'img/slider/amaron.png' %}" alt="#">
-                                    <span class="call-to-circle-1"></span>
+                                  <span class="call-to-circle-1"><img src="{%static 'img/slider/41-1.png' %}" alt="#"></span>
                                     <!--  -->
                                 </div>
                             </div>
@@ -148,8 +146,8 @@
                                 <img src="{%static 'img/icons/7.png' %}" alt="Icon Image">
                             </div>
                             <div class="call-us-info">
-                                <p>Call us 24/7. We can answer for <a href="contact.html" class="ltn__secondary-color text-decoration"><strong>all your questions</strong></a>.</p>
-                                <h2><a href="tel:+123456789">507-452-1254</a> <small> or </small> <a href="tel:+123456789">508-452-1253</a></h2>
+                                <p>Call us to know more <a href="{% url 'contact' %}" class="ltn__secondary-color text-decoration"><strong>all your questions</strong></a>.</p>
+                                <h2><a href="tel:+123456789">+91-9656938383</a> <small> or </small> <a href="tel:+123456789">+919744488383</a></h2>
                             </div>
                         </div>
                     </div>
@@ -229,9 +227,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="call-to-action-inner call-to-action-inner-2 text-center">
-                        <h2>Get A Free Service Or Make A Call</h2>
+                        <h2>Call us to know more about the products:</h2>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-4 btn-white" href="contact.html"><i class="fas fa-phone-volume"></i> MAKE A CALL</a>
+                            <a class="btn btn-effect-4 btn-white" href="{% url 'contact' %}"><i class="fas fa-phone-volume"></i> MAKE A CALL</a>
                         </div>
                     </div>
                 </div>
@@ -353,7 +351,7 @@
                     <div class="call-to-action-inner call-to-action-inner-2 text-center">
                         <h2>View our location on Google Maps</h2>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-4 btn-white" href="contact.html">MAPS</a>
+                            <a class="btn btn-effect-4 btn-white" href="{% url 'contact' %}">MAPS</a>
                         </div>
                     </div>
                 </div>
