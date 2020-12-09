@@ -142,6 +142,10 @@
                                                 <div class="product-price">
                                                     <span>{{compatability.model_id.part_number}}</span>
                                                 </div>
+                                                <h1 class="product-title"><a href="models/{{compatability.model_id.part_number}}+range">Vehicles : </a></h1>
+                                                <div class="product-price">
+                                                    <h6>{{compatability.vehicle_models}}</h6>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -279,11 +283,18 @@
                                                 <div class="product-price">
                                                     <span>{{bikes_comp.bike_id.model_id}}</span>
                                                 </div>
+<<<<<<< HEAD
                                                 {% if bikes_comp.bike_scooter == "BK" %}
                                                 <span>Bike</span>
                                                 {% elif bikes_comp.bike_scooter == "SC" %}
                                                 <span>Scooter</span>
                                                 {% endif %}
+=======
+                                                <h1 class="product-title"><a href="models/{{bikes_comp.bike_id.model_id}}+range">Model Number : </a></h1>
+                                                <div class="product-price">
+                                                    <h6>{{bikes_comp.application}}</h6>
+                                                </div>
+>>>>>>> 3a8dd8f25612ddcfd9a2e57eefa6044c27d9a3a4
                                             </div>
                                         </div>
                                     </div>
