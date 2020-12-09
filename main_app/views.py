@@ -28,9 +28,13 @@ def details(request, range ):
 def models(request, model_name):
     batterymodel = Batterymodel.objects.filter(part_number=model_name)
     compatability = Compatability.objects.all()
-    print(compatability)
+    bikes = Bikes.objects.filter(model_id=model_name)
+    bike_comp = Compatabilitybike.objects.filter(bike_id__model_id=model_name)
+    print(batterymodel)
     print(model_name)
-    context = {'batterymodel': batterymodel, 'compatability': compatability, 'model_name': model_name}
+    print(bikes)
+    print(bike_comp)
+    context = {'batterymodel': batterymodel, 'compatability': compatability, 'model_name': model_name, 'bikes': bikes, 'bike_comp': bike_comp}
     return render(request, 'main_app/models.html', context)
 
 def search(request, range, range_name):

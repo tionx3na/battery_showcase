@@ -26,6 +26,8 @@
     </div>
     <!-- BREADCRUMB AREA END -->
 
+
+    {% if batterymodel %}
     <!-- TEAM DETAILS AREA START -->
     <div class="ltn__team-details-area mb-90">
         <div class="container">
@@ -169,6 +171,132 @@
             {% endfor %}
         </div>
     </div>
+    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% if bikes %}
+    {% for bikes in bikes %}
+    <!-- TEAM DETAILS AREA START -->
+    <div class="ltn__team-details-area mb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ltn__team-details-member-info text-center mb-40">
+                        <div class="team-details-img">
+                            <img src="{{bikes.range_id.range_pic.url}}" alt="image">
+                        </div>
+                        <h2>{{bikes.model_id}}</h2>
+                        <h6 class="text-uppercase ltn__secondary-color">{{bikes.range_id.range_name}}</h6>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="section-title">Model Information</h1>
+                    <hr>
+                    <div class="ltn__team-details-member-info-details">
+                        <p>The superior build of Bosch Automotive batteries make them resistant to high temperatures in the engine compartment, minimising acid consumption and corrosion. This translates into minimum self-discharge, extreme tolerance for short distance driving, and reliable operational safety throughout the operating life of the battery.</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ltn__team-details-member-about">
+                                    <ul>
+                                        <li><strong>Model Number :</strong>&nbsp &nbsp {{bikes.model_id}}</li>
+
+                                        <li><strong>Cold Start Performance :</strong>&nbsp &nbsp &nbsp  {{bikes.range_id.cold_start_perf}}/5</li>
+                                        <li><strong>Deep Cycle Resistance :</strong>&nbsp &nbsp &nbsp  {{bikes.range_id.deep_cylce_resist}}/5</li>
+                                        <li><strong>Number of Electrical Consumers :</strong>&nbsp &nbsp &nbsp  {{bikes.range_id.no_of_electrical_consumers}}/5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ltn__team-details-member-about">
+                                    <ul>
+                                        <li><strong>Technology :</strong>&nbsp {{bikes.range_id.technology}} Ah</li>
+                                        <li><strong>Price :</strong>&nbsp &nbsp &nbsp &nbsp Rs. {{bikes.price}}</li>
+                                         <li><strong>Service life :</strong>&nbsp &nbsp &nbsp {{bikes.range_id.service_life}} years</li>
+                                        <li><strong>Warranty :</strong>&nbsp &nbsp &nbsp  {{bikes.range_id.warranty_duration}} months</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h1 class="text-uppercase ltn__secondary-color" align="center">Warranty: <p>{{bikes.range_id.warranty_duration}} Months</p></h1>
+                        <hr>
+                        <h1 class="section-title">Compatability</h1>
+                        <div class="row ltn__custom-gutter mt-50 mb-20">
+                            <div class="col-xl-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6">
+                                    <div class="ltn__feature-icon">
+                                        <span><i class="icon-tire"></i></span>
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3>Based on Application:</h3>
+                                        {% for bike_comp in bike_comp %}
+                                        <a class="ltn__service-btn" href="#">{{bike_comp.OEM}}:</a>
+                                        <ul>
+                                            <li>{{bike_comp.application}}</li>
+                                        </ul>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6 active">
+                                    <div class="ltn__feature-icon">
+                                        <span><i class="icon-mechanic"></i></span>
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3><a href=" ">Based on C10 Capacity:</a></h3>
+                                         {% for bike_comp in bike_comp %}
+                                        <a class="ltn__service-btn" href="#">{{bike_comp.OEM}}</a>
+                                         <ul>
+                                            <li>{{bike_comp.C10}} Ah</li>
+                                        </ul>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6">
+                                    <div class="ltn__feature-icon">
+                                        <span><i class="icon-wheel-1"></i></span>
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3><a href=" ">Based on Battery Type: </a></h3>
+                                         {% for bike_comp in bike_comp %}
+                                        <a class="ltn__service-btn" href="#">{{bike_comp.OEM}}</a>
+                                         <ul>
+                                            <li>{{bike_comp.battery_type}}</li>
+                                        </ul>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+
+
+
+
     <!-- TEAM DETAILS AREA END -->
  <!-- BRAND LOGO AREA START -->
     <div class="ltn__brand-logo-area ltn__brand-logo-1 pt-80 pb-110 plr--9">
