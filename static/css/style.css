@@ -157,18 +157,18 @@ font-family: 'Rajdhani', sans-serif;
   --red-3: #DB483B;
   --silver: #C0C0C0;
   --gray: #808080;
-  --maroon: #800000;
+  --maroon: #800000;   /* amaroon footer */
   --yellow: #FFFF00;
   --olive: #808000;
   --lime: #00FF00;
   --green: #008000;
   --aqua: #00FFFF;
   --teal: #008080;
-  --blue: #1E90FF;
+  --blue: #1E90FF;     /* BOSCH page footer */
   --navy: #000080;
   --fuchsia: #FF00FF;
   --purple: #800080;
-  --pink: #FFC0CB;
+  --pink: #0E191E;   /* landing page footer */
   --nude: #ebc8b2;
   --orange: #ffa500;
   --ratings: #FFB800;
@@ -382,6 +382,26 @@ ol li {
 
 .section-bg-4 {
   background-color: var(--maroon); }
+  .section-bg-4 h1,
+  .section-bg-4 h2,
+  .section-bg-4 h3,
+  .section-bg-4 h4,
+  .section-bg-4 h5,
+  .section-bg-4 h6,
+  .section-bg-4 p,
+  .section-bg-4 li,
+  .section-bg-4 i,
+  .section-bg-4 span,
+  .section-bg-4 tr,
+  .section-bg-4 td {
+    color: var(--white); }
+  .section-bg-4 .ltn__separate-line .separate-icon {
+    background-color: var(--black-2); }
+  .section-bg-4 .ltn__copyright-design h6, .section-bg-4 .ltn__copyright-design h4 {
+    color: var(--ltn__color-1); }
+
+.section-bg-15 {
+  background-color: var(--pink); }
   .section-bg-4 h1,
   .section-bg-4 h2,
   .section-bg-4 h3,
@@ -10160,9 +10180,9 @@ input.cart-plus-minus-box {
     filter: grayscale(0);
     opacity: 1; }
     .ltn__brand-logo-item:hover img {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1); }
+      -webkit-transform: scale(2.2);
+      -ms-transform: scale(2.2);
+      transform: scale(2.2); }
 
 /* ----------------------------------------------------
     Progress Bar 
