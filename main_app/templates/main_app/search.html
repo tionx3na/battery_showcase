@@ -676,66 +676,57 @@
                             </form>
                         </div>
                         <!-- Category Widget -->
-                        {% if range %}
+                       
                         <div class="widget ltn__menu-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
-                            <ul>
-                                 {% for bmodel in bmodel %}
-                                <li><a href="models/{{bmodel.part_number}}+range">{{bmodel.part_number}}<span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
-                                {% endfor %}
-                            </ul>
+                            {% if range %}
+                                <ul>
+                                    {% for bmodel in bmodel %}
+                                    <li><a href="models/{{bmodel.part_number}}+range">{{bmodel.part_number}}<span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if args %}
+                                <ul>
+                                    {% for compatability in compatability %}
+                                    <li><a href="models/{{compatability.model_id.part_number}}+range">{{compatability.model_id.part_number}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if range_name == "vm" %}
+                                <!-- to check vehicle models -->
+                                <ul>
+                                    {% for ll in ll %}
+                                    <li><a href="models/{{ll.model_id.part_number}}+range">{{ll.model_id.part_number}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if bikes %}
+                            <!-- to check vehicle models -->
+                                <ul>
+                                    {% for bikes in bikes %}
+                                    <li><a href="models/{{bikes.model_id}}+range">{{bikes.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                            {% if bikes_comp %}
+                            <!-- to check vehicle models -->
+                                <ul>
+                                    {% for bikes_comp in bikes_comp %}
+                                    <li><a href="models/{{bikes_comp.bike_id.model_id}}+range">{{bikes_comp.bike_id.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if bike_app %}
+                            <!-- to check vehicle models -->
+                                <ul>
+                                    {% for bike_app in bike_app %}
+                                    <li><a href="models/{{bike_app.bike_id.model_id}}+range">{{bike_app.bike_id.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                         </div>
-                         {% elif args %}
-                        <div class="widget ltn__menu-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
-                            <ul>
-                               {% for compatability in compatability %}
-                                <li><a href="models/{{compatability.model_id.part_number}}+range">{{compatability.model_id.part_number}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% elif range_name == "vm" %}
-                        <!-- to check vehicle models -->
-                        <div class="widget ltn__menu-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
-                            <ul>
-                               {% for ll in ll %}
-                                <li><a href="models/{{ll.model_id.part_number}}+range">{{ll.model_id.part_number}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% endif %}
-                         {% if bikes %}
-                        <!-- to check vehicle models -->
-                        <div class="widget ltn__menu-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
-                            <ul>
-                               {% for bikes in bikes %}
-                                <li><a href="models/{{bikes.model_id}}+range">{{bikes.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                         {% elif bikes_comp %}
-                        <!-- to check vehicle models -->
-                        <div class="widget ltn__menu-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
-                            <ul>
-                               {% for bikes_comp in bikes_comp %}
-                                <li><a href="models/{{bikes_comp.bike_id.model_id}}+range">{{bikes_comp.bike_id.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                         {% elif bike_app %}
-                        <!-- to check vehicle models -->
-                        <div class="widget ltn__menu-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Models</h4>
-                            <ul>
-                               {% for bike_app in bike_app %}
-                                <li><a href="models/{{bike_app.bike_id.model_id}}+range">{{bike_app.bike_id.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% endif %}
                     </aside>
                 </div>
             </div>
