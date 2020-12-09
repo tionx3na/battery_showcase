@@ -63,6 +63,7 @@ def search(request, range, range_name):
     bikes = Bikes.objects.filter(model_id__contains=args3)
     bikes_comp = Compatabilitybike.objects.filter(OEM__contains=args3)
     bike_app = Compatabilitybike.objects.filter(application__contains=args3)
+    model_number = Batterymodel.objects.filter(part_number__contains=args)
     print(args)
     print(args2)
     print(args3)
@@ -77,7 +78,7 @@ def search(request, range, range_name):
     print(bikes_comp)
     print(bike_app)
 
-    context = {'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel, 'bikes': bikes, 'bikes_comp': bikes_comp, 'bike_app': bike_app }
+    context = {'model_number':model_number,'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel, 'bikes': bikes, 'bikes_comp': bikes_comp, 'bike_app': bike_app }
     return render(request, 'main_app/search.html', context)
 
 
