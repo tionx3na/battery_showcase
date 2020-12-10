@@ -17,9 +17,18 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+from main_app.sitemaps import StaticViewsSitemap
+from django.contrib.sitemaps.views import sitemap
+
+
+sitemaps = {
+    'static': StaticViewsSitemap
+}
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('', include('main_app.urls')), # main_app is the default page to be shown first
 ]
 
