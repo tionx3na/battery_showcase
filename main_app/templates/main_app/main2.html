@@ -138,7 +138,7 @@
         <div class="ltn__utilize-menu-inner ltn__scrollbar">
             <div class="ltn__utilize-menu-head">
                 <div class="site-logo">
-                    <a href="index.html"><img src="{%static 'img/brand-logo/logo.png' %}" alt="Logo"></a>
+                    <a href="{% url 'landing' %}"><img src="{%static 'img/brand-logo/logo2.png' %}" alt="Logo"></a>
                 </div>
                 <button class="ltn__utilize-close">×</button>
             </div>
@@ -155,7 +155,7 @@
                     </li>
                     <li><a href="{% url 'contact' %}">Contact</a>
                     </li>
-                    <li><a href="{% url 'search' '+s' '+s' %}">Search</a>
+                    <li><a href="{% url 'search2' '+2s' %}">Search</a>
                     </li>
                     <li><a href="{% url 'landing' %}">Landing Page</a></li>
                 </ul>
@@ -189,12 +189,12 @@
 
 
        <!-- FOOTER AREA START (ltn__footer-2 ltn__footer-color-1) -->
-    <footer class="ltn__footer-area ltn__footer-2 ltn__footer-color-2">
+    <footer class="ltn__footer-area ltn__footer-2 ltn__footer-color-1">
         <div class="footer-top-area  section-bg-4">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-md-5">
-                        <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1 bg-image bg-overlay-theme-black-50" data-bg="{$ static 'img/bg/4.jpg' %}">
+                        <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1 bg-image bg-overlay-theme-black-60" data-bg="{% static 'img/bg/black.jpg' %}">
                             <h6 class="ltn__secondary-color text-uppercase">// time schedule</h6>
                             <h4 class="footer-title">Open Hours</h4>
                             <ul>
@@ -210,7 +210,7 @@
                     </div>
                     <div class="col-xl-5 col-md-7">
                         <div class="footer-widget footer-menu-widget footer-menu-widget-2-column clearfix">
-                            <h4 class="footer-title">Bosch Automotive Batteries: <br> Product Range</h4>
+                            <h4 class="footer-title">Amaron Solar Batteries: <br> Product Range</h4>
                             <div class="footer-menu">
                                 <ul>
                                     <li><a href="#footer_to1">First-class product quality and high safety</a></li>
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
-                        <img src="{% static 'img/banner/footer.jpg' %}"/>
+                        <img src="{% static 'img/banner/ams.jpg' %}"/>
                     </div>
                 </div>
             </div>
@@ -233,7 +233,7 @@
                     <div class="col-md-6 col-12">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                              <a href="{% url 'landing' %}"><img src="{%static 'img/brand-logo/logo2.png' %}" alt="Logo"></a>
+                                <a href="{% url 'landing' %}"><img src="{%static 'img/brand-logo/logo2.png' %}" alt="Logo"></a>
                             </div>
                             <div class="get-support ltn__copyright-design clearfix">
                                 <div class="get-support-info">

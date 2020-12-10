@@ -1105,7 +1105,7 @@
         -------------------------------------------------------- */
         var ltn__testimonial_quote_slider = $('.ltn__testimonial-slider-4-active');
         ltn__testimonial_quote_slider.slick({
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             dots: false,
             arrows: true,

@@ -7,8 +7,8 @@ def landing(request):
     return render(request, 'main_app/landing.html')
 
 def main_app(request):
-    batteryrange = Batteryrange.objects.all()
-    context = {'batteryrange': batteryrange}
+    related = Batteryrange.objects.all()
+    context = {'related': related}
     return render(request, 'main_app/index.html', context)
 
 def showcase(request):

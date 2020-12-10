@@ -16,7 +16,7 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <div class="slide-item-info">
                                             <div class="slide-item-info-inner ltn__slide-animation">
-                                                <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automative Batteries</h6>
+                                                <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automotive Batteries</h6>
                                                 <div class="slide-brief animated">
                                                     <p>Works any time, every time, all the time</p>
                                                 </div>
@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="slide-item-img">
 
-                                    <span class="call-to-circle-1"><img src="{%static 'img/slider/41-1.png' %}" alt="#"></span>
+                                    <span class="call-to-circle-1"><img src="{%static 'img/slider/41-1.png' %}" alt="BOSCH Battery Slogan"></span>
                                     <!--  -->
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <div class="slide-item-info">
                                             <div class="slide-item-info-inner ltn__slide-animation" id="footer_to1">
-                                                <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automative Batteries</h6>
+                                                <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automotive Batteries</h6>
                                                 <h1 class="slide-title animated ">BOSCH <br>  Batteries</h1>
                                                 <div class="slide-brief animated">
                                                     <p>100% long-lasting guarantee </p>
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="slide-item-img">
-                                  <span class="call-to-circle-1"><img src="{%static 'img/slider/41-1.png' %}" alt="#"></span>
+                                  <span class="call-to-circle-1"><img src="{%static 'img/slider/41-1.png' %}" alt="BOSCH Battery Slogan"></span>
                                     <!--  -->
                                 </div>
                             </div>
@@ -89,39 +89,39 @@
                             <li class="layer" data-depth="0.00"></li>
                             <li class="layer" data-depth="0.10">
                                 <div class="ltn__effect-img ltn__effect-img-top-left">
-                                    <img src="{%static 'img/effect/1.png' %}" alt="#">
+                                    <img src="{%static 'img/effect/1.png' %}" alt="BOSCH BATTERY 1">
                                 </div>
                             </li>
                             <li class="layer" data-depth="0.30">
                                 <div class="ltn__effect-img ltn__effect-img-top-right">
-                                    <img src="{%static 'img/effect/2.png' %}" alt="#">
+                                    <img src="{%static 'img/effect/2.png' %}" alt="BOSCH BATTERY 2">
                                 </div>
                             </li>
                             <li class="layer" data-depth="0.50">
                                 <div class="ltn__effect-img ltn__effect-img-center-left">
-                                    <img src="{%static 'img/effect/3.png' %}" alt="#">
+                                    <img src="{%static 'img/effect/3.png' %}" alt="BOSCH BATTERY 3">
                                 </div>
                             </li>
                             <li class="layer" data-depth="0.20">
                                 <div class="ltn__effect-img ltn__effect-img-center-right">
-                                    <img src="{%static 'img/effect/4.png' %}" alt="#">
+                                    <img src="{%static 'img/effect/4.png' %}" alt="BOSCH BATTERY 4">
                                 </div>
                             </li>
                             <li class="layer" data-depth="0.20">
                                 <div class="ltn__effect-img ltn__effect-img-bottom-left">
-                                    <img src="{%static 'img/effect/5.png' %}" alt="#">
+                                    <img src="{%static 'img/effect/5.png' %}" alt="BOSCH BATTERY 5">
                                 </div>
                             </li>
                             <li class="layer" data-depth="0.20">
                                 <div class="ltn__effect-img ltn__effect-img-bottom-right">
-                                    <img src="{%static 'img/effect/6.png' %}" alt="#">
+                                    <img src="{%static 'img/effect/6.png' %}" alt="BOSCH BATTERY 6">
                                 </div>
                             </li>
                             <li class="layer" data-depth="0.50">
                                 <div class="wave ltn__animation-wave-5s ltn__effect-img-top-center " id="footer_to2">
                                     <div class="about-us-img-info">
                                         <div class="about-us-img-info-inner">
-                                            <h1><span class="counter">12</span><span>+</span></h1>
+                                            <h1><span class="counter">134</span><span>+</span></h1>
                                             <h6><span>Years</span> Of Experience</h6>
                                             <span class="dots-bottom"></span>
                                         </div>
@@ -156,19 +156,53 @@
         </div>
     </div>
     <!-- ABOUT US AREA END -->
- <!-- BRAND LOGO AREA START -->
-    <div class="ltn__brand-logo-area ltn__brand-logo-1 pt-80 pb-110 plr--9">
-        <div class="container-fluid">
-            <div class="row ltn__brand-logo-active">
+   <!-- PRODUCT SLIDER AREA START -->
+    <div class="ltn__product-slider-area pb-70">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-12">
-                    <div class="ltn__brand-logo-item">
-                        <img src="{%static 'img/brand-logo/1.png' %}" alt="Brand Logo">
+                    <div class="section-title-area ltn__section-title-2">
+                        <h6 class="section-subtitle ltn__secondary-color">//  Slide To View BOSCH Battery Series</h6>
+                        <h1 class="section-title">Available Products<span>.</span></h1>
                     </div>
                 </div>
             </div>
+            <div class="row ltn__related-product-slider-one-active slick-arrow-1">
+                {% for related in related %}
+                <!-- ltn__product-item -->
+                <div class="col-lg-12">
+                    <div class="ltn__product-item ltn__product-item-3 text-center">
+                        <div class="product-img wave">
+                            <a href="details/{{related.range_name}}+range"><img src="{{related.range_pic.url}}" alt="#"></a>
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="sale-badge">New</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-ratting">
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title"><a href="{% url 'showcase' %}">{{related.range_name}}</a></h2>
+                            <div class="product-price">
+                                <span>Warranty: {{related.warranty_duration}} Months</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
-    <!-- BRAND LOGO AREA END -->
+    <!-- PRODUCT SLIDER AREA END -->
+
 
     <!-- WHY CHOOSE US AREA START -->
     <div class="ltn__why-choose-us-area section-bg-1 pt-120 pb-120" id="footer_to3">
@@ -210,10 +244,10 @@
                 <div class="col-lg-6">
                     <div class="why-choose-us-img-wrap">
                         <div class="why-choose-us-img-1 text-left">
-                            <img src="{%static 'img/others/1.jpg' %}" alt="Image">
+                            <img src="{%static 'img/others/1.jpg' %}" alt="BOSCH BAttery Image">
                         </div>
                         <div class="why-choose-us-img-2 text-right">
-                            <img src="{%static 'img/others/2.jpg' %}" alt="Image">
+                            <img src="{%static 'img/others/2.jpg' %}" alt="BOSCH Battery Image">
                         </div>
                     </div>
                 </div>
@@ -299,7 +333,7 @@
                     <br>
                     <br>
                     <div class="feature-banner-img text-center mb-30">
-                        <img src="{%static 'img/others/2.png' %}" alt="#">
+                        <img src="{%static 'img/others/2.png' %}" alt="BOSCH S5 BATTERY">
                     </div>
                 </div>
                 <div class="col-lg-4">
