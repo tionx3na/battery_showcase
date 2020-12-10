@@ -17,13 +17,12 @@
                                         <div class="slide-item-info">
                                             <div class="slide-item-info-inner ltn__slide-animation">
                                                 <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Solar Batteries</h6>
-                                                <h1 class="slide-title animated ">Amaron <br> Batteries</h1>
                                                 <div class="slide-brief animated">
                                                     <p>Works any time, every time, all the time</p>
                                                 </div>
                                                 <div class="btn-wrapper animated">
-                                                    <a href="shop" class="theme-btn-1 btn btn-effect-1">View</a>
-                                                    <a href="contact" class="btn btn-transparent btn-effect-2 white-color">Contact</a>
+                                                    <a href="{% url 'search2' '+2s'  %}" class="theme-btn-1 btn btn-effect-1">Search</a>
+                                                    <a href="{% url 'contact' %}" class="btn btn-transparent btn-effect-2 white-color">Contact</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -40,7 +39,7 @@
                 </div>
             </div>
             <!-- ltn__slide-item  -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 ltn__slide-item-5 text-color-white bg-image bg-overlay-theme-black-80" data-bg="{%static 'img/slider/41.jpg' %}">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3 ltn__slide-item-5 text-color-white bg-image bg-overlay-theme-black-60" data-bg="{%static 'img/slider/44.jpg' %}">
                 <div class="ltn__slide-item-inner text-right">
                     <div class="container">
                         <div class="row">
@@ -49,21 +48,19 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <div class="slide-item-info">
                                             <div class="slide-item-info-inner ltn__slide-animation" id="footer_to1">
-                                                <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Automative Batteries</h6>
-                                                <h1 class="slide-title animated ">AMARON <br>  Batteries</h1>
+                                                <h6 class="slide-sub-title ltn__secondary-color animated">// High Quality Solar Batteries</h6>
                                                 <div class="slide-brief animated">
                                                     <p>100% long-lasting guarantee </p>
                                                 </div>
                                                 <div class="btn-wrapper animated">
-                                                    <a href="shop2" class="theme-btn-1 btn btn-effect-1">View</a>
-                                                    <a href="contact" class="btn btn-transparent btn-effect-2 white-color">Contact</a>
+                                                    <a href="{% url 'search2' '+2s'  %}" class="theme-btn-1 btn btn-effect-1">Search</a>
+                                                    <a href="{% url 'contact' %}" class="btn btn-transparent btn-effect-2 white-color">Contact</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide-item-img">
-                                    <img src="{%static 'img/slider/amaron.png' %}" alt="#">
                                     <span class="call-to-circle-1"></span>
                                     <!--  -->
                                 </div>
@@ -131,7 +128,7 @@
                                             <div class="mb-30">
                                                 <div class="add-a-review">
                                                     <h4>View all models:</h4> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                                                     <a href="" class="theme-btn-1 btn btn-effect-1">MODELS</a>
+                                                     <a href="{% url 'search2' 'quanta' %}" class="theme-btn-1 btn btn-effect-1">MODELS</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -153,9 +150,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="call-to-action-inner call-to-action-inner-2 text-center">
-                        <h2>Get A Free Service Or Make A Call</h2>
+                        <h2>Call us to know more about the products: </h2>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-4 btn-white" href="contact.html"><i class="fas fa-phone-volume"></i> MAKE A CALL</a>
+                            <a class="btn btn-effect-4 btn-white" href="{% url 'contact' %}"><i class="fas fa-phone-volume"></i> MAKE A CALL</a>
                         </div>
                     </div>
                 </div>
@@ -191,8 +188,8 @@
                     <div class="ltn__shop-details-tab-inner ltn__shop-details-tab-inner-2">
                         <div class="ltn__shop-details-tab-menu">
                             <div class="nav">
-                                <a class="active show" data-toggle="tab" href="#liton_tab_details_1_3">Description</a>
-                                <a data-toggle="tab" href="#liton_tab_details_1_4" class="">More Models</a>
+                                <a class="active show" data-toggle="tab" href="#liton_tab_details_1_3">Tubular Series</a>
+                                <a data-toggle="tab" href="#liton_tab_details_1_4" class="">SMF Series</a>
                             </div>
                         </div>
                         <div class="tab-content">
@@ -209,6 +206,9 @@
                                          <li>Radgrid™ profile providing lower internal resistance and performance</li>
                                          <li>Instacharge™, A pateneted paste recipe for excellent charge acceptance</li>
                                          <li>Higher AH and WH Efficiency</li>
+                                         <li>Higher AH and WH Efficiency</li>
+                                         <li>View the models : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                             <a href="{% url 'search2' 'tubular' %}" class="theme-btn-1 btn btn-effect-1">MODELS</a></li>
                                      </ul>
                                 </div>
                             </div>
@@ -230,9 +230,9 @@
                                                 <li>Radgrid™ profile providing lower internal resistance and performance</li>
                                                 <li>Instacharge™, A pateneted paste recipe for excellent charge acceptance</li>
                                                 <li>Higher AH and WH Efficiency</li>
-                                                </ul>
-                                                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                                                     <a href="" class="theme-btn-1 btn btn-effect-1">MODELS</a>
+                                                    <li>View the models : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                                        <a href="{% url 'search2' 'smf' %}" class="theme-btn-1 btn btn-effect-1">MODELS</a></li>
+                                                   </ul>
                                                 </div>
                                             </div>
                                         </form>

@@ -157,7 +157,7 @@ font-family: 'Rajdhani', sans-serif;
   --red-3: #DB483B;
   --silver: #C0C0C0;
   --gray: #808080;
-  --maroon: #800000;   /* amaroon footer */
+  --maroon: #8A1200;   /* amaroon footer */
   --yellow: #FFFF00;
   --olive: #808000;
   --lime: #00FF00;
@@ -4644,7 +4644,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .sticky-active.ltn__sticky-bg-white .header-feature-icon,
   .sticky-active.ltn__sticky-bg-white .header-search-1 .search-icon,
   .sticky-active.ltn__sticky-bg-white .ltn__header-options .ltn__drop-menu > ul > li > a {
-    color: var(--ltn__heading-color); }
+    color: var(--white); }
   .sticky-active.ltn__sticky-bg-white .ltn__header-options-2 .header-search-1,
   .sticky-active.ltn__sticky-bg-white .ltn__header-options-2 .header-search-1 i,
   .sticky-active.ltn__sticky-bg-white .ltn__header-options-2 .ltn__drop-menu > ul > li > a,

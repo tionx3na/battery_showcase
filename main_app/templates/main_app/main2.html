@@ -48,8 +48,7 @@
                     <div class="col-md-7">
                         <div class="ltn__top-bar-menu">
                             <ul>
-                                <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i> info@webmail.com</a></li>
-                                <li><a href="locations.html"><i class="icon-placeholder"></i> 15/A, Nest Tower, NYC</a></li>
+                                <li><i class="icon-mail"></i> &nbsp E-mail : team4bbdktm@gmail.com</li>
                             </ul>
                         </div>
                     </div>
@@ -62,18 +61,6 @@
                                         <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
                                             <ul>
                                                 <li><a href="#" class="dropdown-toggle"><span class="active-currency">English</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- ltn__social-media -->
-                                        <div class="ltn__social-media">
-                                            <ul>
-                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-
-                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -92,7 +79,7 @@
                     <div class="col">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="index.html"><img src="{%static 'img/logo-2.png' %}" alt="Logo"></a>
+                                 <a href="{% url 'landing' %}"><img src="{%static 'img/brand-logo/logo2.png' %}" alt="Logo"></a>
                             </div>
                             <div class="get-support clearfix get-support-color-white">
                                 <div class="get-support-icon">
@@ -100,7 +87,7 @@
                                 </div>
                                 <div class="get-support-info">
                                     <h6>Get Support</h6>
-                                    <h4><a href="tel:+123456789">123-456-789-10</a></h4>
+                                     <h4><a href="tel:+91-9656938383">+91-9656938383</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -110,14 +97,14 @@
                             <nav>
                                 <div class="ltn__main-menu">
                                     <ul>
-                                        <li class="menu-icon"><a href="{% url 'main_app' %}">Home</a></li>
-                                        <li class="menu-icon"><a href="about">About</a></li>
+                                        <li class="menu-icon"><a href="{% url 'amaron' %}">Home</a></li>
+                                        <li class="menu-icon"><a href="{% url 'about' %}">About</a></li>
 
                                         <li class="menu-icon"><a href="#">Batteries</a>
                                             <ul class="menu-icon">
-                                                <li><a href="shop">Bosch</a>
+                                                <li><a href="{% url 'showcase' %}">Bosch</a>
                                                 </li>
-                                                <li><a href="shop2">Amaron</a>
+                                                <li><a href="{% url 'amaron' %}">Amaron</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -144,6 +131,38 @@
         <!-- ltn__header-middle-area end -->
     </header>
     <!-- HEADER AREA END -->
+      <!-- HEADER AREA END -->
+
+      <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="index.html"><img src="{%static 'img/brand-logo/logo.png' %}" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="{% url 'amaron' %}">Home</a>
+                    </li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="#">Batteries</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'showcase' %}">BOSCH</a></li>
+                            <li><a href="{% url 'amaron' %}">AMARON</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li><a href="{% url 'search' '+s' '+s' %}">Search</a>
+                    </li>
+                    <li><a href="{% url 'landing' %}">Landing Page</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Utilize Mobile Menu End -->
 
 
 
@@ -214,7 +233,7 @@
                     <div class="col-md-6 col-12">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="index.html"><img src="{%static 'img/logo-2.png' %}" alt="Logo"></a>
+                              <a href="{% url 'landing' %}"><img src="{%static 'img/brand-logo/logo2.png' %}" alt="Logo"></a>
                             </div>
                             <div class="get-support ltn__copyright-design clearfix">
                                 <div class="get-support-info">
