@@ -3,12 +3,18 @@ from .models import *
 from django.db.models import Q
 
 # Create your views here.
+
+def error_404_view(request, exception):
+    return render(request, 'main_app/404.html')
+
+
 def landing(request):
     return render(request, 'main_app/landing.html')
 
 def main_app(request):
     related = Batteryrange.objects.all()
-    context = {'related': related}
+    pdf = Pdf.objects.all()
+    context = {'related': related, 'pdf': pdf}
     return render(request, 'main_app/index.html', context)
 
 def showcase(request):
@@ -41,6 +47,13 @@ def search(request, range, range_name):
     args =range_name
     args2 =range_name
     args3 =range_name
+    br = range
+    lala = "+S!"
+    oemapp =""
+    first = ""
+    second =""
+    cc = ""
+    arg4 = range_name
     if request.method == 'POST':
         oem = request.POST.get('search_l')
         oem1 = oem.lower()
@@ -51,6 +64,9 @@ def search(request, range, range_name):
         args = oem1
         args2 = oem2
         args3 = oem3
+        arg4 = oem
+        lala = oem.split()
+        br = None
         range = None
         range_name = "vm"
     brange = Batteryrange.objects.filter(range_name=range)
@@ -64,6 +80,15 @@ def search(request, range, range_name):
     bikes_comp = Compatabilitybike.objects.filter(OEM__contains=args3)
     bike_app = Compatabilitybike.objects.filter(application__contains=args3)
     model_number = Batterymodel.objects.filter(part_number__contains=args)
+    bike_range = Bikes.objects.filter(range_id__range_name = br)
+    if len(lala) == 2:
+        for i in lala:
+            first = lala[0]
+            second = lala[1]
+            str(first)
+            str(second)
+            oemapp = Compatabilitybike.objects.filter(application__contains=second)
+            cc = Compatability.objects.filter(vehicle_models__contains=second)
     print(args)
     print(args2)
     print(args3)
@@ -77,8 +102,15 @@ def search(request, range, range_name):
     print(bikes)
     print(bikes_comp)
     print(bike_app)
+    print(br)
+    print(bike_range)
+    print(oemapp)
+    print(lala)
+    print(first)
+    print(second)
+    print(cc)
 
-    context = {'model_number':model_number,'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel, 'bikes': bikes, 'bikes_comp': bikes_comp, 'bike_app': bike_app }
+    context = {'model_number':model_number,'batteryrange': batteryrange, 'batterymodel': batterymodel, 'compatability': compatability,'args': args, 'range_name': range_name, 'args2': args2, 'bb': bb, 'll': ll, 'range': range, 'brange': brange, 'bmodel':bmodel, 'bikes': bikes, 'bikes_comp': bikes_comp, 'bike_app': bike_app,'bike_range': bike_range, 'oemapp': oemapp, 'cc': cc, 'br' : br, 'arg4': arg4 }
     return render(request, 'main_app/search.html', context)
 
 

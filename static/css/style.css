@@ -101,7 +101,7 @@ font-family: 'Rajdhani', sans-serif;
   --gradient-color-1: linear-gradient(90deg, rgba(23,61,105,1) 0%, rgba(38,114,201,1) 50%);      #footer BOSCH
   --gradient-color-2: linear-gradient(90deg, rgba(242,139,194,1) 0%, rgba(216,177,242,1) 50%);          #footer AMARAON
   --gradient-color-3: linear-gradient(to bottom, rgba(7,28,31,0) 0%, rgba(7,28,31,1) 90%);
-  --gradient-color-4: linear-gradient(to top, rgba(242,246,247,0) 0%, rgba(242,246,247,1) 90%);
+  --gradient-color-4: linear-gradient(90deg, rgba(142,14,0,1) 0%, rgba(0,0,0,1) 990%);
   /* Background Colors */
   --section-bg-1: #FFFFFF;
   /* White */
@@ -157,7 +157,7 @@ font-family: 'Rajdhani', sans-serif;
   --red-3: #DB483B;
   --silver: #C0C0C0;
   --gray: #808080;
-  --maroon: #8A1200;   /* amaroon footer */
+  --maroon: #bf0040;   /* amaroon footer */
   --yellow: #FFFF00;
   --olive: #808000;
   --lime: #00FF00;
@@ -377,6 +377,58 @@ ol li {
   .section-bg-3 .ltn__separate-line .separate-icon {
     background: var(--gradient-color-1); }
     .section-bg-3 .ltn__separate-line .separate-icon i {
+      color: var(--white); }
+
+
+
+
+
+.section-bg-30 {
+  position: relative; }
+  .section-bg-30:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--maroon);
+    opacity: 0.9; }
+  .section-bg-30 h1,
+  .section-bg-30 h2,
+  .section-bg-30 h3,
+  .section-bg-30 h4,
+  .section-bg-30 h5,
+  .section-bg-30 h6,
+  .section-bg-30 p,
+  .section-bg-30 li,
+  .section-bg-30 i,
+  .section-bg-30 span,
+  .section-bg-30 tr,
+  .section-bg-30 td {
+    color: var(--white); }
+  .section-bg-30 .slick-arrow-1 .slick-arrow {
+    background-color: transparent; }
+  .section-bg-30 input[type="text"],
+  .section-bg-30 input[type="email"],
+  .section-bg-30 input[type="password"],
+  .section-bg-30 input[type="submit"] {
+    border-color: var(--white);
+    color: var(--white); }
+  .section-bg-30 .btn-wrapper button {
+    color: var(--white); }
+  .section-bg-30 input::-webkit-input-placeholder {
+    color: var(--white); }
+  .section-bg-30 input::-moz-placeholder {
+    color: var(--white); }
+  .section-bg-30 input:-ms-input-placeholder {
+    color: var(--white); }
+  .section-bg-30 input:-moz-placeholder {
+    color: var(--white); }
+  .section-bg-30 .ltn__separate-line .separate-icon {
+    background: var(--gradient-color-4); }
+    .section-bg-30 .ltn__separate-line .separate-icon i {
       color: var(--white); }
 
 
@@ -10180,9 +10232,9 @@ input.cart-plus-minus-box {
     filter: grayscale(0);
     opacity: 1; }
     .ltn__brand-logo-item:hover img {
-      -webkit-transform: scale(2.2);
-      -ms-transform: scale(2.2);
-      transform: scale(2.2); }
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5); }
 
 /* ----------------------------------------------------
     Progress Bar 

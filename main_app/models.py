@@ -277,6 +277,12 @@ class Amaronmodels(models.Model):
     def __str__(self):
         return self.item
 
+class Pdf(models.Model):
+    adminupload = models.FileField(upload_to='media')
+    title = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.title
 
 
 

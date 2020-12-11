@@ -93,9 +93,9 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{bmodel.part_number}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{bmodel.part_number}}+range">Model Number : {{bmodel.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bmodel.part_number}}</span>
+                                                    <span>Rs. {{bmodel.price}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,9 +138,9 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{compatability.model_id.part_number}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{compatability.model_id.part_number}}+range">Model Number : {{compatability.model_id.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{compatability.model_id.part_number}}</span>
+                                                    <span>Rs. {{compatability.model_id.price}}</span>
                                                 </div>
                                                 <h1 class="product-title"><a href="models/{{compatability.model_id.part_number}}+range">Vehicles : </a></h1>
                                                 <div class="product-price">
@@ -189,9 +189,9 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{ll.model_id.part_number}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{ll.model_id.part_number}}+range">Model Number : {{ll.model_id.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{ll.model_id.part_number}}</span>
+                                                    <span>Rs. {{ll.model_id.price}}</span>
                                                 </div><h1 class="product-title"><a href="models/{{ll.model_id.part_number}}+range">Vehicles : </a></h1>
                                                 <div class="product-price">
                                                     <h6>{{ll.vehicle_models}}</h6>
@@ -239,9 +239,9 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{bikes.model_id}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{bikes.model_id}}+range">Model Number : {{bikes.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bikes.model_id}}</span>
+                                                    <span>Rs. {{bikes.price}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -283,9 +283,9 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{bikes_comp.bike_id.model_id}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{bikes_comp.bike_id.model_id}}+range">Model Number : {{bikes_comp.bike_id.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bikes_comp.bike_id.model_id}}</span>
+                                                    <span>Rs. {{bikes_comp.bike_id.price}}</span>
                                                 </div>
                                                 {% if bikes_comp.bike_scooter == "BK" %}
                                                 <span>Bike</span>
@@ -336,9 +336,9 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{bike_app.bike_id.model_id}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{bike_app.bike_id.model_id}}+range">Model Number : {{bike_app.bike_id.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bike_app.bike_id.model_id}}</span>
+                                                    <span>Rs. {{bike_app.bike_id.price}}</span>
                                                 </div>
                                                 <h1 class="product-title"><a href="models/{{bike_app.bike_id.model_id}}+range">Vehicles List : </a></h1>
                                                 <div class="product-price">
@@ -386,10 +386,154 @@
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="models/{{bb.part_number}}+range">Model Number : </a></h2>
+                                                <h2 class="product-title"><a href="models/{{bb.part_number}}+range">Model Number : {{bb.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bb.part_number}}</span>
+                                                    <span>{{bb.price}}</span>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    {% endfor %}
+                                    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+                                    {% if bike_range %}
+                                    {% for bike_range in bike_range %}
+                                    <!-- ltn__product-item -->
+                                    <div class="col-xl-4 col-sm-6 col-12">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                <a href="models/{{bike_range.model_id}}+range"><img src="{{bike_range.range_id.range_pic.url}}" alt="#"></a>
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="models/{{bike_range.model_id}}+range" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="models/{{bike_range.model_id}}+range">Model Number : {{bike_range.model_id}}</a></h2>
+                                                <div class="product-price">
+                                                    <span>Rs. {{bike_range.price}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    {% endfor %}
+                                    {% endif %}
+
+                                    {% if oemapp %}
+                                    {% for oemapp in oemapp %}
+                                    <!-- ltn__product-item -->
+                                    <div class="col-xl-4 col-sm-6 col-12">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                <a href="models/{{oemapp.bike_id.model_id}}+range"><img src="{{oemapp.bike_id.range_id.range_pic.url}}" alt="#"></a>
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="models/{{oemapp.bike_id.model_id}}+range" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="models/{{oemapp.model_id}}+range">Model Number : {{oemapp.bike_id.model_id}}</a></h2>
+                                                <div class="product-price">
+                                                    <span>Rs. {{oemapp.bike_id.price}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    {% endfor %}
+                                    {% endif %}
+
+                                    {% if cc %}
+                                    {% for cc in cc %}
+                                    <!-- ltn__product-item -->
+                                    <div class="col-xl-4 col-sm-6 col-12">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                <a href="models/{{cc.model_id.part_number}}+range"><img src="{{cc.range_id.range_pic.url}}" alt="#"></a>
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="models/{{cc.model_id.part_number}}+range" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="models/{{cc.model_id.part_number}}+range">Model Number : {{cc.model_id.part_number}}</a></h2>
+                                                <div class="product-price">
+                                                    <span>Rs. {{cc.model_id.price}}</span>
+                                                </div><h1 class="product-title"><a href="models/{{cc.model_id.part_number}}+range">Vehicles : </a></h1>
+                                                <div class="product-price">
+                                                    <h6>{{cc.vehicle_models}}</h6>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -401,31 +545,8 @@
                             </div>
                         </div>
 
+
                         <!--  Other view -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                         <div class="tab-pane fade" id="liton_product_list">
@@ -719,6 +840,154 @@
 
                                     {% endfor %}
                                     {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+                                     {% if bike_range %}
+                                     {% for bike_range in bike_range %}
+                                    <!-- ltn__product-item -->
+                                    <div class="col-lg-12">
+                                        <div class="ltn__product-item ltn__product-item-3">
+                                            <div class="product-img">
+                                                <a href="models/{{bike_range.model_id}}+range"><img src="{{bike_range.range_id.range_pic.url}}" alt="#"></a>
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h2 class="product-title"><a href="models/{{bike_range.model_id}}+range">Compatible with {{br}}</a></h2>
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>{{bike_range.model_id}}</span>
+                                                </div>
+                                                <div class="product-brief">
+                                                    <p>{{bike_range.range_id.technology}}</p>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="models/{{bike_range.model_id}}+range">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                    {% endif %}
+
+                                     {% if oemapp %}
+                                    {% for oemapp in oemapp %}
+                                    <!-- ltn__product-item -->
+                                    <div class="col-lg-12">
+                                        <div class="ltn__product-item ltn__product-item-3">
+                                            <div class="product-img">
+                                                <a href="models/{{oemapp.bike_id.model_id}}+range"><img src="{{oemapp.bike_id.range_id.range_pic.url}}" alt="#"></a>
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h2 class="product-title"><a href="models/{{oemapp.bike_id.model_id}}+range">Compatible with {{arg4}}</a></h2>
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>{{oemapp.bike_id.model_id}}</span>
+                                                </div>
+                                                <div class="product-brief">
+                                                    <p>{{oemapp.bike_id.range_id.technology}}</p>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="models/{{oemapp.bike_id.model_id}}+range">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                    {% endif %}
+
+                                     {% if cc %}
+                                    {% for cc in cc %}
+                                    <!-- ltn__product-item -->
+                                    <div class="col-lg-12">
+                                        <div class="ltn__product-item ltn__product-item-3">
+                                            <div class="product-img">
+                                                <a href="models/{{cc.model_id.part_number}}+range"><img src="{{cc.range_id.range_pic.url}}" alt="#"></a>
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h2 class="product-title"><a href="models/{{occ.model_id.part_number}}+range">Compatible with {{arg4}}</a></h2>
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>{{cc.model_id.part_number}}</span>
+                                                </div>
+                                                <div class="product-brief">
+                                                    <p>{{cc.model_id.range_id.technology}}</p>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="models/{{cc.model_id.part_number}}+range">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -797,6 +1066,31 @@
                                     {% endfor %}
                                 </ul>
                             {% endif %}
+                             {% if bike_range %}
+                            <!-- to check vehicle models -->
+                                <ul>
+                                     {% for bike_range in bike_range %}
+                                    <li><a href="models/{{bike_range.model_id}}+range">{{bike_range.model_id}} <span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                             {% if oemapp %}
+                            <!-- to check vehicle models -->
+                                <ul>
+                                    {% for oemapp in oemapp %}
+                                    <li><a href="models/{{oemapp.bike_id.model_id}}+range">{{oemapp.bike_id.model_id}}<span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if cc %}
+                            <!-- to check vehicle models -->
+                                <ul>
+                                    {% for cc in cc %}
+                                    <li><a href="models/{{cc.model_id.part_number}}+range">{{cc.model_id.part_number}}<span><i class="fas fa-long-arrow-alt-right"></i></span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
                         </div>
                     </aside>
                 </div>

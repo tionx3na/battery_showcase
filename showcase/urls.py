@@ -19,6 +19,8 @@ from django.conf.urls.static import static
 from django.conf import settings
 from main_app.sitemaps import StaticViewsSitemap
 from django.contrib.sitemaps.views import sitemap
+from django.views.static import serve
+from django.urls import path, re_path
 
 
 sitemaps = {
@@ -28,8 +30,12 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}), # XML sitemap url
     path('', include('main_app.urls')), # main_app is the default page to be shown first
+    re_path(r'^download/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT})
 ]
+
+
+handler404 = 'main_app.views.error_404_view'
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)  # This url pattern allows django to find MEDIA_URL in settings.py
