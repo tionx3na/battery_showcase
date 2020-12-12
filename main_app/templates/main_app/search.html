@@ -95,7 +95,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{bmodel.part_number}}+range">Model Number : {{bmodel.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{bmodel.price}}</span>
+                                                    {% if bmodel.price == 0 %}
+                                                    <span> NA  </span>
+                                                    {% else %}
+                                                    <span>&#x20B9 {{bmodel.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
@@ -140,7 +144,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{compatability.model_id.part_number}}+range">Model Number : {{compatability.model_id.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{compatability.model_id.price}}</span>
+                                                    {% if compatability.model_id.price == 0%}
+                                                        <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9{{compatability.model_id.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                                 <h1 class="product-title"><a href="models/{{compatability.model_id.part_number}}+range">Vehicles : </a></h1>
                                                 <div class="product-price">
@@ -191,7 +199,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{ll.model_id.part_number}}+range">Model Number : {{ll.model_id.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{ll.model_id.price}}</span>
+                                                    {% if ll.model_id.price == 0 %}
+                                                        <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{ll.model_id.price}}</span>
+                                                    {% endif %}
                                                 </div><h1 class="product-title"><a href="models/{{ll.model_id.part_number}}+range">Vehicles : </a></h1>
                                                 <div class="product-price">
                                                     <h6>{{ll.vehicle_models}}</h6>
@@ -241,7 +253,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{bikes.model_id}}+range">Model Number : {{bikes.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{bikes.price}}</span>
+                                                    {% if bikes.price == 0 %}
+                                                        <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{bikes.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
@@ -285,7 +301,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{bikes_comp.bike_id.model_id}}+range">Model Number : {{bikes_comp.bike_id.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{bikes_comp.bike_id.price}}</span>
+                                                    {% if bikes_comp.bike_id.price == 0 %}
+                                                        <span>  NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{bikes_comp.bike_id.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                                 {% if bikes_comp.bike_scooter == "BK" %}
                                                 <span>Bike</span>
@@ -338,7 +358,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{bike_app.bike_id.model_id}}+range">Model Number : {{bike_app.bike_id.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{bike_app.bike_id.price}}</span>
+                                                    {% if bike_app.bike_id.price == 0 %}
+                                                        <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{bike_app.bike_id.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                                 <h1 class="product-title"><a href="models/{{bike_app.bike_id.model_id}}+range">Vehicles List : </a></h1>
                                                 <div class="product-price">
@@ -388,7 +412,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{bb.part_number}}+range">Model Number : {{bb.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>{{bb.price}}</span>
+                                                    {% if bb.price == 0 %}
+                                                        <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{bb.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
@@ -442,7 +470,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{bike_range.model_id}}+range">Model Number : {{bike_range.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{bike_range.price}}</span>
+                                                    {% if bike_range.price == 0%}
+                                                        <span>NA</span>
+                                                    {% else %}
+                                                        <span> &#x20B9 {{bike_range.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
@@ -485,7 +517,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{oemapp.model_id}}+range">Model Number : {{oemapp.bike_id.model_id}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{oemapp.bike_id.price}}</span>
+                                                    {% if oemapp.bike_id.price == 0 %}
+                                                    <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{oemapp.bike_id.price}}</span>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
@@ -528,7 +564,11 @@
                                                 </div>
                                                 <h2 class="product-title"><a href="models/{{cc.model_id.part_number}}+range">Model Number : {{cc.model_id.part_number}}</a></h2>
                                                 <div class="product-price">
-                                                    <span>Rs. {{cc.model_id.price}}</span>
+                                                    {% if cc.model_id.price == 0 %}
+                                                        <span> NA </span>
+                                                    {% else %}
+                                                        <span>&#x20B9 {{cc.model_id.price}}</span>
+                                                    {% endif %}
                                                 </div><h1 class="product-title"><a href="models/{{cc.model_id.part_number}}+range">Vehicles : </a></h1>
                                                 <div class="product-price">
                                                     <h6>{{cc.vehicle_models}}</h6>
