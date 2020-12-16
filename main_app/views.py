@@ -156,3 +156,10 @@ def contacts(request):
     return render(request, 'main_app/contact.html')
 
 
+def about2(request):
+    return render(request, 'main_app/about2.html')
+
+def contacts2(request):
+    return render(request, 'main_app/contact2.html')
+
+

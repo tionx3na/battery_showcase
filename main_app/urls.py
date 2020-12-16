@@ -17,4 +17,6 @@ urlpatterns = [
     path('about', views.about, name="about"),  # About page
     path('search2/<str:name>+range',views.search2, name="search2"), # Amaron search page
     path('search2/adetails/<str:amodel>+range', views.amarondetails, name="adetails"), # Amaron details view page
+    path('about2', views.about2, name="about2"),  # About page
+    path('contact2', views.contacts2, name="contact2"),  # Contact page
 ]
